@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06C491BF272981F3005C6CF2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06C491BE272981F3005C6CF2 /* GoogleService-Info.plist */; };
 		9724775B27297CC600158DD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724775A27297CC600158DD9 /* AppDelegate.swift */; };
 		9724775D27297CC600158DD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724775C27297CC600158DD9 /* SceneDelegate.swift */; };
 		9724775F27297CC600158DD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724775E27297CC600158DD9 /* ViewController.swift */; };
@@ -14,6 +15,8 @@
 		9724776427297CCC00158DD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9724776327297CCC00158DD9 /* Assets.xcassets */; };
 		9724776727297CCC00158DD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9724776527297CCC00158DD9 /* LaunchScreen.storyboard */; };
 		9724777227297CCD00158DD9 /* FlowersStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724777127297CCD00158DD9 /* FlowersStoreTests.swift */; };
+		9C9349D8BB4227FD7CDD5BAE /* Pods_FlowersStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8AE8BBC1D9C5E29DC71435 /* Pods_FlowersStoreTests.framework */; };
+		CE6B96B141FDD603C494FA1E /* Pods_FlowersStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBD54BD2B88087787B41122 /* Pods_FlowersStore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06C491BE272981F3005C6CF2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		943D62C7FB6E913807C3C76D /* Pods-FlowersStoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowersStoreTests.debug.xcconfig"; path = "Target Support Files/Pods-FlowersStoreTests/Pods-FlowersStoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9724775727297CC600158DD9 /* FlowersStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowersStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9724775A27297CC600158DD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9724775C27297CC600158DD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +42,11 @@
 		9724776827297CCC00158DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9724776D27297CCD00158DD9 /* FlowersStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowersStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9724777127297CCD00158DD9 /* FlowersStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersStoreTests.swift; sourceTree = "<group>"; };
+		9D8AE8BBC1D9C5E29DC71435 /* Pods_FlowersStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowersStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DF5EFB8670B9CBC32486B1F /* Pods-FlowersStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowersStore.debug.xcconfig"; path = "Target Support Files/Pods-FlowersStore/Pods-FlowersStore.debug.xcconfig"; sourceTree = "<group>"; };
+		AFBD54BD2B88087787B41122 /* Pods_FlowersStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowersStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFD78FEF3D61F88B30FDDA74 /* Pods-FlowersStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowersStore.release.xcconfig"; path = "Target Support Files/Pods-FlowersStore/Pods-FlowersStore.release.xcconfig"; sourceTree = "<group>"; };
+		D55641B5759F5ADCBC7704CF /* Pods-FlowersStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowersStoreTests.release.xcconfig"; path = "Target Support Files/Pods-FlowersStoreTests/Pods-FlowersStoreTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6B96B141FDD603C494FA1E /* Pods_FlowersStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,18 +62,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C9349D8BB4227FD7CDD5BAE /* Pods_FlowersStoreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C151A7D43DC6863D5814081 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFBD54BD2B88087787B41122 /* Pods_FlowersStore.framework */,
+				9D8AE8BBC1D9C5E29DC71435 /* Pods_FlowersStoreTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9724774E27297CC600158DD9 = {
 			isa = PBXGroup;
 			children = (
 				9724775927297CC600158DD9 /* FlowersStore */,
 				9724777027297CCD00158DD9 /* FlowersStoreTests */,
 				9724775827297CC600158DD9 /* Products */,
+				DB9B8144ACD15A5A3DD37527 /* Pods */,
+				3C151A7D43DC6863D5814081 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +101,7 @@
 		9724775927297CC600158DD9 /* FlowersStore */ = {
 			isa = PBXGroup;
 			children = (
+				06C491BE272981F3005C6CF2 /* GoogleService-Info.plist */,
 				9724775A27297CC600158DD9 /* AppDelegate.swift */,
 				9724775C27297CC600158DD9 /* SceneDelegate.swift */,
 				9724775E27297CC600158DD9 /* ViewController.swift */,
@@ -97,6 +121,18 @@
 			path = FlowersStoreTests;
 			sourceTree = "<group>";
 		};
+		DB9B8144ACD15A5A3DD37527 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DF5EFB8670B9CBC32486B1F /* Pods-FlowersStore.debug.xcconfig */,
+				CFD78FEF3D61F88B30FDDA74 /* Pods-FlowersStore.release.xcconfig */,
+				943D62C7FB6E913807C3C76D /* Pods-FlowersStoreTests.debug.xcconfig */,
+				D55641B5759F5ADCBC7704CF /* Pods-FlowersStoreTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9724778127297CCD00158DD9 /* Build configuration list for PBXNativeTarget "FlowersStore" */;
 			buildPhases = (
+				5A4C7B7B4B6BF1C33B4DAB54 /* [CP] Check Pods Manifest.lock */,
 				9724775327297CC600158DD9 /* Sources */,
 				9724775427297CC600158DD9 /* Frameworks */,
 				9724775527297CC600158DD9 /* Resources */,
+				FF5BC665F1F5B1CAC91D8F40 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -121,6 +159,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9724778427297CCD00158DD9 /* Build configuration list for PBXNativeTarget "FlowersStoreTests" */;
 			buildPhases = (
+				1205D07A0D57E675BB32E9FF /* [CP] Check Pods Manifest.lock */,
 				9724776927297CCD00158DD9 /* Sources */,
 				9724776A27297CCD00158DD9 /* Frameworks */,
 				9724776B27297CCD00158DD9 /* Resources */,
@@ -179,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9724776727297CCC00158DD9 /* LaunchScreen.storyboard in Resources */,
+				06C491BF272981F3005C6CF2 /* GoogleService-Info.plist in Resources */,
 				9724776427297CCC00158DD9 /* Assets.xcassets in Resources */,
 				9724776227297CC600158DD9 /* Main.storyboard in Resources */,
 			);
@@ -192,6 +232,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1205D07A0D57E675BB32E9FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlowersStoreTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A4C7B7B4B6BF1C33B4DAB54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlowersStore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF5BC665F1F5B1CAC91D8F40 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlowersStore/Pods-FlowersStore-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlowersStore/Pods-FlowersStore-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlowersStore/Pods-FlowersStore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9724775327297CC600158DD9 /* Sources */ = {
@@ -360,6 +464,7 @@
 		};
 		9724778227297CCD00158DD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DF5EFB8670B9CBC32486B1F /* Pods-FlowersStore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -378,7 +483,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.leonir.deolindo.FlowersStore;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.FlowersStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -388,6 +493,7 @@
 		};
 		9724778327297CCD00158DD9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFD78FEF3D61F88B30FDDA74 /* Pods-FlowersStore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -406,7 +512,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.leonir.deolindo.FlowersStore;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.FlowersStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -416,6 +522,7 @@
 		};
 		9724778527297CCD00158DD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 943D62C7FB6E913807C3C76D /* Pods-FlowersStoreTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -441,6 +548,7 @@
 		};
 		9724778627297CCD00158DD9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D55641B5759F5ADCBC7704CF /* Pods-FlowersStoreTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
