@@ -16,6 +16,8 @@
 		9B06DF74272ACC0B00DA2F83 /* FlowersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06DF73272ACC0B00DA2F83 /* FlowersListViewController.swift */; };
 		9B06DF78272ACD6F00DA2F83 /* FlowersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06DF77272ACD6F00DA2F83 /* FlowersListView.swift */; };
 		9C9349D8BB4227FD7CDD5BAE /* Pods_FlowersStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8AE8BBC1D9C5E29DC71435 /* Pods_FlowersStoreTests.framework */; };
+		C88A1FE6272AD1B600ECCBDE /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88A1FE5272AD1B600ECCBDE /* ViewCode.swift */; };
+		C88A1FE8272AD2EA00ECCBDE /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88A1FE7272AD2EA00ECCBDE /* UIView+Constraints.swift */; };
 		CE6B96B141FDD603C494FA1E /* Pods_FlowersStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBD54BD2B88087787B41122 /* Pods_FlowersStore.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		9D8AE8BBC1D9C5E29DC71435 /* Pods_FlowersStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowersStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF5EFB8670B9CBC32486B1F /* Pods-FlowersStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowersStore.debug.xcconfig"; path = "Target Support Files/Pods-FlowersStore/Pods-FlowersStore.debug.xcconfig"; sourceTree = "<group>"; };
 		AFBD54BD2B88087787B41122 /* Pods_FlowersStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowersStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C88A1FE5272AD1B600ECCBDE /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		C88A1FE7272AD2EA00ECCBDE /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		CFD78FEF3D61F88B30FDDA74 /* Pods-FlowersStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowersStore.release.xcconfig"; path = "Target Support Files/Pods-FlowersStore/Pods-FlowersStore.release.xcconfig"; sourceTree = "<group>"; };
 		D55641B5759F5ADCBC7704CF /* Pods-FlowersStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowersStoreTests.release.xcconfig"; path = "Target Support Files/Pods-FlowersStoreTests/Pods-FlowersStoreTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +105,7 @@
 		9724775927297CC600158DD9 /* FlowersStore */ = {
 			isa = PBXGroup;
 			children = (
+				C88A1FE3272AD19000ECCBDE /* Utils */,
 				06C491BE272981F3005C6CF2 /* GoogleService-Info.plist */,
 				9724775A27297CC600158DD9 /* AppDelegate.swift */,
 				9724775C27297CC600158DD9 /* SceneDelegate.swift */,
@@ -135,6 +140,23 @@
 				9B06DF77272ACD6F00DA2F83 /* FlowersListView.swift */,
 			);
 			path = FlowersList;
+			sourceTree = "<group>";
+		};
+		C88A1FE3272AD19000ECCBDE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C88A1FE4272AD1A600ECCBDE /* Layout */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C88A1FE4272AD1A600ECCBDE /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				C88A1FE5272AD1B600ECCBDE /* ViewCode.swift */,
+				C88A1FE7272AD2EA00ECCBDE /* UIView+Constraints.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		DB9B8144ACD15A5A3DD37527 /* Pods */ = {
@@ -317,7 +339,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B06DF74272ACC0B00DA2F83 /* FlowersListViewController.swift in Sources */,
+				C88A1FE6272AD1B600ECCBDE /* ViewCode.swift in Sources */,
 				9B06DF78272ACD6F00DA2F83 /* FlowersListView.swift in Sources */,
+				C88A1FE8272AD2EA00ECCBDE /* UIView+Constraints.swift in Sources */,
 				9724775B27297CC600158DD9 /* AppDelegate.swift in Sources */,
 				9724775D27297CC600158DD9 /* SceneDelegate.swift in Sources */,
 			);

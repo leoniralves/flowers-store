@@ -13,6 +13,7 @@ final class FlowersListView: UIView {
     // MARK: - UI Components
     private lazy var collectionView: UICollectionView = {
         let collectionView: UICollectionView = .init()
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         
         return collectionView
     }()
@@ -24,5 +25,15 @@ final class FlowersListView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension FlowersListView: ViewCode {
+    func setupHierarchy() {
+        addSubview(collectionView)
+    }
+    
+    func setupConstraints() {
+        collectionView.constraintToSuperview()
     }
 }
