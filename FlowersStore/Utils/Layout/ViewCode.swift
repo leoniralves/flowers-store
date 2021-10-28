@@ -9,8 +9,14 @@ protocol ViewCode {
     func setupHierarchy()
     func setupConstraints()
     func additionalSetups()
+    func setupView()
 }
 
 extension ViewCode {
     func additionalSetups() {}
+    func setupView() {
+        setupHierarchy()
+        setupConstraints()
+        additionalSetups()
+    }
 }

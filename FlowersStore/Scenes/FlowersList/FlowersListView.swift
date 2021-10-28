@@ -12,15 +12,20 @@ final class FlowersListView: UIView {
     
     // MARK: - UI Components
     private lazy var collectionView: UICollectionView = {
-        let collectionView: UICollectionView = .init()
+        let layout: UICollectionViewFlowLayout = .init()
+        let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        
+        collectionView.delegate = self
+        collectionView.dataSource = self
         return collectionView
     }()
+    
+    
     
     // MARK: - Initializer Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupView()
     }
     
     required init?(coder: NSCoder) {
@@ -35,5 +40,31 @@ extension FlowersListView: ViewCode {
     
     func setupConstraints() {
         collectionView.constraintToSuperview()
+    }
+    
+    func additionalSetups() {
+        
+    }
+}
+
+extension FlowersListView: UICollectionViewDelegate {
+    
+}
+
+extension FlowersListView: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100.0, height: 100.0)
+    }
+}
+
+extension FlowersListView: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = UICollectionViewCell()
+        cell.backgroundColor = .red
+        return cell
     }
 }
