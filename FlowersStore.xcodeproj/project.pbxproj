@@ -10,11 +10,10 @@
 		06C491BF272981F3005C6CF2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06C491BE272981F3005C6CF2 /* GoogleService-Info.plist */; };
 		9724775B27297CC600158DD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724775A27297CC600158DD9 /* AppDelegate.swift */; };
 		9724775D27297CC600158DD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724775C27297CC600158DD9 /* SceneDelegate.swift */; };
-		9724775F27297CC600158DD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724775E27297CC600158DD9 /* ViewController.swift */; };
-		9724776227297CC600158DD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9724776027297CC600158DD9 /* Main.storyboard */; };
 		9724776427297CCC00158DD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9724776327297CCC00158DD9 /* Assets.xcassets */; };
 		9724776727297CCC00158DD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9724776527297CCC00158DD9 /* LaunchScreen.storyboard */; };
 		9724777227297CCD00158DD9 /* FlowersStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724777127297CCD00158DD9 /* FlowersStoreTests.swift */; };
+		9B06DF74272ACC0B00DA2F83 /* FlowersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06DF73272ACC0B00DA2F83 /* FlowersListViewController.swift */; };
 		9C9349D8BB4227FD7CDD5BAE /* Pods_FlowersStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8AE8BBC1D9C5E29DC71435 /* Pods_FlowersStoreTests.framework */; };
 		CE6B96B141FDD603C494FA1E /* Pods_FlowersStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBD54BD2B88087787B41122 /* Pods_FlowersStore.framework */; };
 /* End PBXBuildFile section */
@@ -35,13 +34,12 @@
 		9724775727297CC600158DD9 /* FlowersStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowersStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9724775A27297CC600158DD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9724775C27297CC600158DD9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9724775E27297CC600158DD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9724776127297CC600158DD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9724776327297CCC00158DD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9724776627297CCC00158DD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9724776827297CCC00158DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9724776D27297CCD00158DD9 /* FlowersStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowersStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9724777127297CCD00158DD9 /* FlowersStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersStoreTests.swift; sourceTree = "<group>"; };
+		9B06DF73272ACC0B00DA2F83 /* FlowersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersListViewController.swift; sourceTree = "<group>"; };
 		9D8AE8BBC1D9C5E29DC71435 /* Pods_FlowersStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowersStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF5EFB8670B9CBC32486B1F /* Pods-FlowersStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowersStore.debug.xcconfig"; path = "Target Support Files/Pods-FlowersStore/Pods-FlowersStore.debug.xcconfig"; sourceTree = "<group>"; };
 		AFBD54BD2B88087787B41122 /* Pods_FlowersStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowersStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,11 +102,10 @@
 				06C491BE272981F3005C6CF2 /* GoogleService-Info.plist */,
 				9724775A27297CC600158DD9 /* AppDelegate.swift */,
 				9724775C27297CC600158DD9 /* SceneDelegate.swift */,
-				9724775E27297CC600158DD9 /* ViewController.swift */,
-				9724776027297CC600158DD9 /* Main.storyboard */,
 				9724776327297CCC00158DD9 /* Assets.xcassets */,
 				9724776527297CCC00158DD9 /* LaunchScreen.storyboard */,
 				9724776827297CCC00158DD9 /* Info.plist */,
+				9B06DF73272ACC0B00DA2F83 /* FlowersListViewController.swift */,
 			);
 			path = FlowersStore;
 			sourceTree = "<group>";
@@ -129,7 +126,6 @@
 				943D62C7FB6E913807C3C76D /* Pods-FlowersStoreTests.debug.xcconfig */,
 				D55641B5759F5ADCBC7704CF /* Pods-FlowersStoreTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -220,7 +216,6 @@
 				9724776727297CCC00158DD9 /* LaunchScreen.storyboard in Resources */,
 				06C491BF272981F3005C6CF2 /* GoogleService-Info.plist in Resources */,
 				9724776427297CCC00158DD9 /* Assets.xcassets in Resources */,
-				9724776227297CC600158DD9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9724775F27297CC600158DD9 /* ViewController.swift in Sources */,
+				9B06DF74272ACC0B00DA2F83 /* FlowersListViewController.swift in Sources */,
 				9724775B27297CC600158DD9 /* AppDelegate.swift in Sources */,
 				9724775D27297CC600158DD9 /* SceneDelegate.swift in Sources */,
 			);
@@ -327,14 +322,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9724776027297CC600158DD9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9724776127297CC600158DD9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9724776527297CCC00158DD9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -475,7 +462,6 @@
 				INFOPLIST_FILE = FlowersStore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -504,7 +490,6 @@
 				INFOPLIST_FILE = FlowersStore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
