@@ -41,7 +41,7 @@ extension FlowersListView: ViewCode {
     }
     
     func additionalSetups() {
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(FlowerItemCell.self, forCellWithReuseIdentifier: String(describing: FlowerItemCell.self))
     }
 }
 
@@ -61,8 +61,7 @@ extension FlowersListView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FlowerItemCell.self), for: indexPath)
         return cell
     }
 }
