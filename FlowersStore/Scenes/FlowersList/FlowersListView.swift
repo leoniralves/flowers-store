@@ -20,8 +20,6 @@ final class FlowersListView: UIView {
         return collectionView
     }()
     
-    
-    
     // MARK: - Initializer Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -43,7 +41,7 @@ extension FlowersListView: ViewCode {
     }
     
     func additionalSetups() {
-        
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
     }
 }
 
@@ -63,7 +61,7 @@ extension FlowersListView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         cell.backgroundColor = .red
         return cell
     }
