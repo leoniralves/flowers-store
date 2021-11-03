@@ -40,8 +40,8 @@ final class FlowerItemCell: UICollectionViewCell {
     }()
     
     // MARK: - Initializer Methods
-    init() {
-        super.init(frame: .zero)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupView()
     }
     
@@ -49,6 +49,10 @@ final class FlowerItemCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Public Methods
+    func setup() {
+        print("\(Self.self) \(#function)")
+    }
 }
 
 // MARK: - ViewCode
