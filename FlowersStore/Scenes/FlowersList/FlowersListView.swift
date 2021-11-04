@@ -21,14 +21,30 @@ final class FlowersListView: UIView {
         return collectionView
     }()
     
+    private let margingDistance: CGFloat = 12.0
+    private let betweenDistance: CGFloat = 20.0
+    private let numberOfCells: CGFloat = 2.0
+    
+    //    private let screenFrameSize = UIS
+    
     // MARK: - Initializer Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
     
+    
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func calculateSize() -> CGSize {
+        let viewWidth = UIScreen.main.bounds.width
+        let size = viewWidth - ((margingDistance * 2) + betweenDistance * numberOfCells)
+        let cellSize = (size / numberOfCells)
+        
+        return CGSize(width: cellSize, height: cellSize)
     }
 }
 
@@ -52,7 +68,7 @@ extension FlowersListView: UICollectionViewDelegate {
 
 extension FlowersListView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 134, height: 144)
+        return calculateSize()
     }
 }
 
