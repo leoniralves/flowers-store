@@ -13,6 +13,7 @@ final class FlowersListView: UIView {
     // MARK: - UI Components
     private lazy var collectionView: UICollectionView = {
         let layout: UICollectionViewFlowLayout = .init()
+        layout.sectionInset = .init(top: 10, left: 10, bottom: 10, right: 10)
         let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
@@ -51,13 +52,13 @@ extension FlowersListView: UICollectionViewDelegate {
 
 extension FlowersListView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100.0, height: 100.0)
+        return CGSize(width: 134, height: 144)
     }
 }
 
 extension FlowersListView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
