@@ -79,4 +79,8 @@ extension FlowerItemCell: ViewCode {
             .topAnchor(equalTo: imageView.topAnchor, constant: 8)
             .trailingAnchor(equalTo: imageView.trailingAnchor, constant: -8)
     }
+    
+    func additionalSetups() {
+        backgroundColor = .red
+    }
 }

@@ -33,8 +33,6 @@ final class FlowersListView: UIView {
         setupView()
     }
     
-    
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -44,7 +42,9 @@ final class FlowersListView: UIView {
         let size = viewWidth - ((margingDistance * 2) + betweenDistance * numberOfCells)
         let cellSize = (size / numberOfCells)
         
-        return CGSize(width: cellSize, height: cellSize)
+        let heightSize: CGFloat = (cellSize * 1.2)
+        
+        return CGSize(width: cellSize, height: heightSize)
     }
 }
 
