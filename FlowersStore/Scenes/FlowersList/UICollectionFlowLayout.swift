@@ -20,12 +20,10 @@ final class UICollectionFlowLayout: UICollectionViewFlowLayout {
         }
         
         let availableWidth = collectionView.bounds.inset(by: collectionView.layoutMargins).width - 48
-        
         let cellWidth = (availableWidth / CGFloat(maxNumColumns)).rounded(.down)
         
-        itemSize = CGSize(width: cellWidth, height: 100)
+        itemSize = CGSize(width: cellWidth, height: (cellWidth * 1.2))
         sectionInsetReference = .fromSafeArea
-        
         sectionInset = UIEdgeInsets(top: minimumInteritemSpacing, left: 24, bottom: 0, right: 24)
     }
 }
