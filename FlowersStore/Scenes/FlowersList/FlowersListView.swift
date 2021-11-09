@@ -12,19 +12,14 @@ final class FlowersListView: UIView {
     
     // MARK: - UI Components
     private lazy var collectionView: UICollectionView = {
-        let layout: UICollectionViewFlowLayout = .init()
-        layout.sectionInset = .init(top: 10, left: 10, bottom: 10, right: 10)
+        let layout: UICollectionFlowLayout = .init()
         let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
         return collectionView
     }()
-    
-    private let margingDistance: CGFloat = 12.0
-    private let betweenDistance: CGFloat = 20.0
-    private let numberOfCells: CGFloat = 2.0
-    
+
     //    private let screenFrameSize = UIS
     
     // MARK: - Initializer Methods
@@ -37,15 +32,6 @@ final class FlowersListView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func calculateSize() -> CGSize {
-        let viewWidth = UIScreen.main.bounds.width
-        let size = viewWidth - ((margingDistance * 2) + betweenDistance * numberOfCells)
-        let cellSize = (size / numberOfCells)
-        
-        let heightSize: CGFloat = (cellSize * 1.2)
-        
-        return CGSize(width: cellSize, height: heightSize)
-    }
 }
 
 extension FlowersListView: ViewCode {
@@ -64,12 +50,6 @@ extension FlowersListView: ViewCode {
 
 extension FlowersListView: UICollectionViewDelegate {
     
-}
-
-extension FlowersListView: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return calculateSize()
-    }
 }
 
 extension FlowersListView: UICollectionViewDataSource {
