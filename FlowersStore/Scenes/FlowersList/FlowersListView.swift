@@ -12,7 +12,7 @@ final class FlowersListView: UIView {
     
     // MARK: - UI Components
     private lazy var collectionView: UICollectionView = {
-        let layout: UICollectionFlowLayout = .init()
+        let layout: FlowerListCollectionViewFlowLayout = .init()
         let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self

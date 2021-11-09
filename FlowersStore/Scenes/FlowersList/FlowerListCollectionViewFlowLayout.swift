@@ -1,5 +1,5 @@
 //
-//  UICollectionFlowLayout.swift
+//  FlowerListCollectionViewFlowLayout.swift
 //  FlowersStore
 //
 //  Created by Rafael Felipe on 09/11/21.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class UICollectionFlowLayout: UICollectionViewFlowLayout {
+final class FlowerListCollectionViewFlowLayout: UICollectionViewFlowLayout {
     
     private let maxNumColumns: Int = 2
     
