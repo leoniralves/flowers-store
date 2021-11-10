@@ -10,6 +10,7 @@ import XCTest
 @testable import FlowersStore
 
 final class FlowerListViewControllerTests: XCTestCase {
+    
     private lazy var sut: FlowersListViewController = {
         let sut: FlowersListViewController = .init()
         sut.loadViewIfNeeded()
@@ -17,6 +18,6 @@ final class FlowerListViewControllerTests: XCTestCase {
     }()
 
     func test_bla() {
-        
+        XCTAssertTrue(sut.view is FlowersListView)
     }
 }
