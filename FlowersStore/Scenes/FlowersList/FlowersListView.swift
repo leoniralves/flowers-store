@@ -8,11 +8,9 @@
 import UIKit
 
 final class FlowersListView: UIView {
-    // MARK: - Properties
-    
     // MARK: - UI Components
     private(set) lazy var collectionView: UICollectionView = {
-        let layout: FlowerListCollectionViewFlowLayout = .init()
+        let layout: FlowersListCollectionViewFlowLayout = .init()
         let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
@@ -29,9 +27,9 @@ final class FlowersListView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
 
+// MARK: - ViewCode
 extension FlowersListView: ViewCode {
     func setupHierarchy() {
         addSubview(collectionView)
