@@ -11,7 +11,7 @@ final class FlowersListView: UIView {
     // MARK: - Properties
     
     // MARK: - UI Components
-    private lazy var collectionView: UICollectionView = {
+    private(set) lazy var collectionView: UICollectionView = {
         let layout: FlowerListCollectionViewFlowLayout = .init()
         let collectionView: UICollectionView = .init(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -19,8 +19,6 @@ final class FlowersListView: UIView {
         collectionView.dataSource = self
         return collectionView
     }()
-
-    //    private let screenFrameSize = UIS
     
     // MARK: - Initializer Methods
     override init(frame: CGRect) {

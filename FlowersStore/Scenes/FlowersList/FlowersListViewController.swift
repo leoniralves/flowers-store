@@ -16,8 +16,4 @@ final class FlowersListViewController: UIViewController {
         super.loadView()
         view = flowersListView
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 }

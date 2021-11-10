@@ -17,7 +17,7 @@ final class FlowerListViewControllerTests: XCTestCase {
         return sut
     }()
 
-    func test_bla() {
+    func test_loadView_checkIfViewTypeIsFlowerListView() {
         XCTAssertTrue(sut.view is FlowersListView)
     }
 }

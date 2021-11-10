@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		068901E0273A9E4400CE4F32 /* FlowerListCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068901DF273A9E4400CE4F32 /* FlowerListCollectionViewFlowLayout.swift */; };
 		06C491BF272981F3005C6CF2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06C491BE272981F3005C6CF2 /* GoogleService-Info.plist */; };
+		584939CC273BF5BA00746224 /* FlowerListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584939CB273BF5BA00746224 /* FlowerListViewTests.swift */; };
 		88BD0DD22732B77D00EB958B /* FlowerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD0DD12732B77D00EB958B /* FlowerItemCell.swift */; };
 		9724775B27297CC600158DD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724775A27297CC600158DD9 /* AppDelegate.swift */; };
 		9724775D27297CC600158DD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724775C27297CC600158DD9 /* SceneDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		068901DF273A9E4400CE4F32 /* FlowerListCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerListCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		06C491BE272981F3005C6CF2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		584939CB273BF5BA00746224 /* FlowerListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerListViewTests.swift; sourceTree = "<group>"; };
 		88BD0DD12732B77D00EB958B /* FlowerItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerItemCell.swift; sourceTree = "<group>"; };
 		943D62C7FB6E913807C3C76D /* Pods-FlowersStoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowersStoreTests.debug.xcconfig"; path = "Target Support Files/Pods-FlowersStoreTests/Pods-FlowersStoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9724775727297CC600158DD9 /* FlowersStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowersStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,7 +126,7 @@
 		9724777027297CCD00158DD9 /* FlowersStoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				C88A208F273BF00C00ECCBDE /* FlowerListViewController */,
+				C88A208F273BF00C00ECCBDE /* FlowersList */,
 			);
 			path = FlowersStoreTests;
 			sourceTree = "<group>";
@@ -165,12 +167,13 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
-		C88A208F273BF00C00ECCBDE /* FlowerListViewController */ = {
+		C88A208F273BF00C00ECCBDE /* FlowersList */ = {
 			isa = PBXGroup;
 			children = (
 				C88A2090273BF05700ECCBDE /* FlowerListViewControllerTests.swift */,
+				584939CB273BF5BA00746224 /* FlowerListViewTests.swift */,
 			);
-			path = FlowerListViewController;
+			path = FlowersList;
 			sourceTree = "<group>";
 		};
 		DB9B8144ACD15A5A3DD37527 /* Pods */ = {
@@ -368,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C88A2091273BF05700ECCBDE /* FlowerListViewControllerTests.swift in Sources */,
+				584939CC273BF5BA00746224 /* FlowerListViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
