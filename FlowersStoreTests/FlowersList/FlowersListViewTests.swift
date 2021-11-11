@@ -29,9 +29,7 @@ final class FlowersListViewTests: XCTestCase {
     func test_init_collectionView_assertThatCollectionViewHasFlowerItemCellRegistered() {
         let dummyIndexPath: IndexPath = .init(item: 0, section: 0)
         
-        sut.collectionView.dequeueReusableCell(
-            withReuseIdentifier: String(describing: FlowerItemCell.self),
-            for: dummyIndexPath
-        )
+        let cell = sut.collectionView.dataSource?.collectionView(sut.collectionView, cellForItemAt: dummyIndexPath)
+        XCTAssertTrue(cell is FlowerItemCell)
     }
 }

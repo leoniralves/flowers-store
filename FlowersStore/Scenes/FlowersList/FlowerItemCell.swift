@@ -84,3 +84,7 @@ extension FlowerItemCell: ViewCode {
         backgroundColor = .red
     }
 }
+
+final class FlowerItemCell2: UICollectionViewCell {
+    
+}
