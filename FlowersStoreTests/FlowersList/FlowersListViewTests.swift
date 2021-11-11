@@ -28,8 +28,15 @@ final class FlowersListViewTests: XCTestCase {
     
     func test_init_collectionView_assertThatCollectionViewHasFlowerItemCellRegistered() {
         let dummyIndexPath: IndexPath = .init(item: 0, section: 0)
-        
         let cell = sut.collectionView.dataSource?.collectionView(sut.collectionView, cellForItemAt: dummyIndexPath)
-        XCTAssertTrue(cell is FlowerItemCell)
+        
+        XCTAssertTrue(cell is FlowerItemCell, "Assert that cell is FlowerItemCell type 💣")
+    }
+    
+    func test_init_collectionView_assertNumberOfItemsIsFour() {
+        let dummySection: Int = 0
+        let assertObject = sut.collectionView.dataSource?.collectionView(sut.collectionView, numberOfItemsInSection: dummySection)
+        
+        XCTAssertEqual(assertObject, 4)
     }
 }

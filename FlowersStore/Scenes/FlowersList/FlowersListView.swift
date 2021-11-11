@@ -40,24 +40,21 @@ extension FlowersListView: ViewCode {
     }
     
     func additionalSetups() {
-        collectionView.register(FlowerItemCell2.self, forCellWithReuseIdentifier: String(describing: FlowerItemCell2.self))
+        collectionView.register(FlowerItemCell.self, forCellWithReuseIdentifier: String(describing: FlowerItemCell.self))
     }
 }
 
-extension FlowersListView: UICollectionViewDelegate {
-    
-}
-
-extension FlowersListView: UICollectionViewDataSource {
+// MARK: - UICollectionViewDelegate & UICollectionViewDataSource
+extension FlowersListView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FlowerItemCell2.self), for: indexPath) as? FlowerItemCell2 else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FlowerItemCell.self), for: indexPath) as? FlowerItemCell else {
             return UICollectionViewCell()
         }
-        //cell.setup()
+        cell.setup()
         return cell
     }
 }
