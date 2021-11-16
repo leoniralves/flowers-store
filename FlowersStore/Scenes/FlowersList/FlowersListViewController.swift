@@ -9,7 +9,7 @@ import UIKit
 
 final class FlowersListViewController: UIViewController {
     // MARK: - Properties
-    private let flowersListView: FlowersListView = .init()
+    private let flowersListView: FlowersListView = .init(numberOfItems: 10)
     
     // MARK: - Override Methods
     override func loadView() {

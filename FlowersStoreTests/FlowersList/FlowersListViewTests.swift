@@ -10,7 +10,8 @@ import XCTest
 
 final class FlowersListViewTests: XCTestCase {
     // MARK: - Properties
-    private var sut: FlowersListView = .init()
+    private var expectedNumberOfItemsInList: Int = 10
+    private lazy var sut: FlowersListView = .init(numberOfItems: expectedNumberOfItemsInList)
     
     // MARK: - Test Methods
     func test_init_collectionViewIsNotNil() {
@@ -33,10 +34,12 @@ final class FlowersListViewTests: XCTestCase {
         XCTAssertTrue(cell is FlowerItemCell, "Assert that cell is FlowerItemCell type 💣")
     }
     
-    func test_init_collectionView_assertNumberOfItemsIsFour() {
+    func test_init_collectionView_assertNumberOfItemsIsTheExpected() {
         let dummySection: Int = 0
         let assertObject = sut.collectionView.dataSource?.collectionView(sut.collectionView, numberOfItemsInSection: dummySection)
         
-        XCTAssertEqual(assertObject, 4)
+        XCTAssertEqual(assertObject, expectedNumberOfItemsInList)
     }
+    
+    // TODO: - Create a test to verify if the shown data represents what is expected.
 }

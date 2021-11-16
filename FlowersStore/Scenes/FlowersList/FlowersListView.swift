@@ -18,9 +18,13 @@ final class FlowersListView: UIView {
         return collectionView
     }()
     
+    // MARK: - Properties
+    private let numberOfItems: Int
+    
     // MARK: - Initializer Methods
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(numberOfItems: Int) {
+        self.numberOfItems = numberOfItems
+        super.init(frame: .zero)
         setupView()
     }
     
@@ -47,7 +51,7 @@ extension FlowersListView: ViewCode {
 // MARK: - UICollectionViewDelegate & UICollectionViewDataSource
 extension FlowersListView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return numberOfItems
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
