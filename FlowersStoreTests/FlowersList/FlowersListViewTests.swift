@@ -42,10 +42,12 @@ final class FlowersListViewTests: XCTestCase {
     }
     
     func test_cellForRow_onCollectionViewCell_titleLabelContainsExpectedContent() {
-        let cell = createDummyCell()
+        let cell = givenCell()
+
+        XCTAssertEqual(cell.titleLabel.text, "Rosa")
     }
     
-    private func createDummyCell(dummyIndexPath: IndexPath = .init(item: 0, section: 0)) -> FlowerItemCell {
+    private func givenCell(dummyIndexPath: IndexPath = .init(item: 0, section: 0)) -> FlowerItemCell {
         guard let cell = sut.collectionView.dataSource?.collectionView(sut.collectionView, cellForItemAt: dummyIndexPath) as? FlowerItemCell else {
             XCTFail()
             return FlowerItemCell()
