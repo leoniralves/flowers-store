@@ -41,5 +41,17 @@ final class FlowersListViewTests: XCTestCase {
         XCTAssertEqual(assertObject, expectedNumberOfItemsInList)
     }
     
-    // TODO: - Create a test to verify if the shown data represents what is expected.
+    func test_cellForRow_onCollectionViewCell_titleLabelContainsExpectedContent() {
+        let cell = createDummyCell()
+    }
+    
+    private func createDummyCell(dummyIndexPath: IndexPath = .init(item: 0, section: 0)) -> FlowerItemCell {
+        guard let cell = sut.collectionView.dataSource?.collectionView(sut.collectionView, cellForItemAt: dummyIndexPath) as? FlowerItemCell else {
+            XCTFail()
+            return FlowerItemCell()
+        }
+        
+        return cell
+    }
+    
 }

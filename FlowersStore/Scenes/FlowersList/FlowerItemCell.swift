@@ -20,7 +20,7 @@ final class FlowerItemCell: UICollectionViewCell {
         return imageView
     }()
     
-    private lazy var titleLabel: UILabel = {
+    private(set) lazy var titleLabel: UILabel = {
         let titleLabel: UILabel = .init()
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
