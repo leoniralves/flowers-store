@@ -41,17 +41,20 @@ final class FlowersListViewTests: XCTestCase {
         XCTAssertEqual(assertObject, expectedNumberOfItemsInList)
     }
     
-    func test_cellForRow_onCollectionViewCell_titleLabelContainsExpectedContent() {
-        let cell = givenCell()
-
-        XCTAssertEqual(cell.titleLabel.text, "Rosa")
+    func test_cellForRow_onCollectionViewCell_whenRowIsInvalid_shouldReturnCollectionViewCell() {
+        let cell: UICollectionViewCell? = givenCell(dummyIndexPath: .init(item: -1, section: 0))
+        
+        XCTAssertFalse(cell is FlowerItemCell)
     }
     
-    private func givenCell(dummyIndexPath: IndexPath = .init(item: 0, section: 0)) -> FlowerItemCell {
-        guard let cell = sut.collectionView.dataSource?.collectionView(sut.collectionView, cellForItemAt: dummyIndexPath) as? FlowerItemCell else {
-            XCTFail()
-            return FlowerItemCell()
-        }
+    func test_cellForRow_onCollectionViewCell_titleLabelContainsExpectedContent() {
+        let cell: FlowerItemCell? = givenCell() as? FlowerItemCell
+        
+        XCTAssertEqual(cell?.titleLabel.text, "Rosa")
+    }
+    
+    private func givenCell(dummyIndexPath: IndexPath = .init(item: 0, section: 0)) -> UICollectionViewCell? {
+        let cell = sut.collectionView.dataSource?.collectionView(sut.collectionView, cellForItemAt: dummyIndexPath)
         
         return cell
     }
