@@ -13,6 +13,13 @@ final class FlowersListViewTests: XCTestCase {
     private var expectedNumberOfItemsInList: Int = 10
     private lazy var sut: FlowersListView = .init(numberOfItems: expectedNumberOfItemsInList)
     
+    lazy var collectionSub: UICollectionViewStub =  {
+        let layout: UICollectionViewFlowLayout = .init()
+        let collectionView: UICollectionViewStub = .init(frame: .zero, collectionViewLayout: layout)
+        
+        return collectionView
+    }()
+    
     // MARK: - Test Methods
     func test_init_collectionViewIsNotNil() {
         XCTAssertNotNil(sut.collectionView)
@@ -42,7 +49,8 @@ final class FlowersListViewTests: XCTestCase {
     }
     
     func test_cellForRow_onCollectionViewCell_whenRowIsInvalid_shouldReturnCollectionViewCell() {
-        let cell: UICollectionViewCell? = givenCell(dummyIndexPath: .init(item: -1, section: 0))
+        collectionSub.collectionViewCellToBeReturned = UICollectionViewCell()
+        let cell: UICollectionViewCell? = sut.collectionView.dataSource?.collectionView(collectionSub, cellForItemAt: .init())
         
         XCTAssertFalse(cell is FlowerItemCell)
     }
