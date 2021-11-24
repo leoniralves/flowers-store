@@ -8,6 +8,9 @@
 import UIKit
 
 final class FlowersListView: UIView {
+    // MARK: - Properties
+    private let flowers: [Flower]
+    
     // MARK: - UI Components
     private(set) lazy var collectionView: UICollectionView = {
         let layout: FlowersListCollectionViewFlowLayout = .init()
@@ -18,12 +21,9 @@ final class FlowersListView: UIView {
         return collectionView
     }()
     
-    // MARK: - Properties
-    private let numberOfItems: Int
-    
     // MARK: - Initializer Methods
-    init(numberOfItems: Int) {
-        self.numberOfItems = numberOfItems
+    init(flowers: [Flower]) {
+        self.flowers = flowers
         super.init(frame: .zero)
         setupView()
     }
@@ -51,7 +51,7 @@ extension FlowersListView: ViewCode {
 // MARK: - UICollectionViewDelegate & UICollectionViewDataSource
 extension FlowersListView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return numberOfItems
+        return flowers.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -61,16 +61,4 @@ extension FlowersListView: UICollectionViewDelegate, UICollectionViewDataSource 
         cell.setup()
         return cell
     }
-}
-
-class Teste: NSObject, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return .init()
-    }
-    
-    
 }

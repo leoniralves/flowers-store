@@ -10,9 +10,9 @@ import XCTest
 
 final class FlowersListViewTests: XCTestCase {
     // MARK: - Properties
-    private var expectedNumberOfItemsInList: Int = 10
-    private lazy var sut: FlowersListView = .init(numberOfItems: expectedNumberOfItemsInList)
+    private lazy var sut: FlowersListView = .init(flowers: [])
     
+    // MARK: - Computed Properties
     lazy var collectionSub: UICollectionViewStub =  {
         let layout: UICollectionViewFlowLayout = .init()
         let collectionView: UICollectionViewStub = .init(frame: .zero, collectionViewLayout: layout)
@@ -45,7 +45,7 @@ final class FlowersListViewTests: XCTestCase {
         let dummySection: Int = 0
         let assertObject = sut.collectionView.dataSource?.collectionView(sut.collectionView, numberOfItemsInSection: dummySection)
         
-        XCTAssertEqual(assertObject, expectedNumberOfItemsInList)
+        XCTAssertEqual(assertObject, 0)
     }
     
     func test_cellForRow_onCollectionViewCell_whenRowIsInvalid_shouldReturnCollectionViewCell() {
