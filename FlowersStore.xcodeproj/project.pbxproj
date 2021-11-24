@@ -15,6 +15,7 @@
 		9724775D27297CC600158DD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724775C27297CC600158DD9 /* SceneDelegate.swift */; };
 		9724776427297CCC00158DD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9724776327297CCC00158DD9 /* Assets.xcassets */; };
 		9724776727297CCC00158DD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9724776527297CCC00158DD9 /* LaunchScreen.storyboard */; };
+		97FD600A274E6C060031E1C6 /* FlowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FD6009274E6C060031E1C6 /* FlowerTests.swift */; };
 		9B06DF74272ACC0B00DA2F83 /* FlowersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06DF73272ACC0B00DA2F83 /* FlowersListViewController.swift */; };
 		9B06DF78272ACD6F00DA2F83 /* FlowersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06DF77272ACD6F00DA2F83 /* FlowersListView.swift */; };
 		9B172BA6274E66F0009230AE /* Flower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B172BA5274E66F0009230AE /* Flower.swift */; };
@@ -50,6 +51,7 @@
 		9724776627297CCC00158DD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9724776827297CCC00158DD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9724776D27297CCD00158DD9 /* FlowersStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowersStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97FD6009274E6C060031E1C6 /* FlowerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerTests.swift; sourceTree = "<group>"; };
 		9B06DF73272ACC0B00DA2F83 /* FlowersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersListViewController.swift; sourceTree = "<group>"; };
 		9B06DF77272ACD6F00DA2F83 /* FlowersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersListView.swift; sourceTree = "<group>"; };
 		9B172BA5274E66F0009230AE /* Flower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flower.swift; sourceTree = "<group>"; };
@@ -138,6 +140,14 @@
 			path = FlowersStoreTests;
 			sourceTree = "<group>";
 		};
+		97FD6008274E6BF10031E1C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				97FD6009274E6C060031E1C6 /* FlowerTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		9B06DF75272ACD4F00DA2F83 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +205,7 @@
 		C88A208F273BF00C00ECCBDE /* FlowersList */ = {
 			isa = PBXGroup;
 			children = (
+				97FD6008274E6BF10031E1C6 /* Models */,
 				9B172BA8274E6915009230AE /* Stubs */,
 				C88A2090273BF05700ECCBDE /* FlowerListViewControllerTests.swift */,
 				584939CB273BF5BA00746224 /* FlowersListViewTests.swift */,
@@ -416,6 +427,7 @@
 			files = (
 				C88A2091273BF05700ECCBDE /* FlowerListViewControllerTests.swift in Sources */,
 				584939CC273BF5BA00746224 /* FlowersListViewTests.swift in Sources */,
+				97FD600A274E6C060031E1C6 /* FlowerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
