@@ -13,4 +13,13 @@ final class FlowerTests: XCTestCase {
     func test_() {
         XCTFail()
     }
+    
+    private func decodeFlowerJSON() -> [Flower]? {
+        if let path = Bundle.main.url(forResource: "flowers", withExtension: "json"),
+           let jsonData = try? Data(contentsOf: path),
+           let flowers = try? JSONDecoder().decode([Flower].self, from: jsonData) {
+            return flowers
+        }
+        return nil
+    }
 }
