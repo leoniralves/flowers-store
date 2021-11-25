@@ -11,7 +11,10 @@ import XCTest
 final class FlowerTests: XCTestCase {
     
     func test_() {
-        XCTFail()
+        let flowerArray: [Flower]? = decodeFlowerJSON()
+        let sut: Flower = XCTUnwrap(flowerArray?.first)
+
+        XCTAssertEqual(sut.name, "Rosa")
     }
     
     private func decodeFlowerJSON() -> [Flower]? {
