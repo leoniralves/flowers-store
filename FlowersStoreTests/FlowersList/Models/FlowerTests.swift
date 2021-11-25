@@ -10,19 +10,28 @@ import XCTest
 
 final class FlowerTests: XCTestCase {
     
-    func test_() {
+    func test_flowerModel_shouldReturnPropertiesTypeSuccessfully() throws {
         let flowerArray: [Flower]? = decodeFlowerJSON()
-        let sut: Flower = XCTUnwrap(flowerArray?.first)
+        let sut: Flower = try XCTUnwrap(flowerArray?.first)
 
         XCTAssertEqual(sut.name, "Rosa")
+        XCTAssertFalse(sut.image.isEmpty)
+        XCTAssertTrue(sut.isFavorite)
     }
     
     private func decodeFlowerJSON() -> [Flower]? {
-        if let path = Bundle.main.url(forResource: "flowers", withExtension: "json"),
-           let jsonData = try? Data(contentsOf: path),
-           let flowers = try? JSONDecoder().decode([Flower].self, from: jsonData) {
+        guard let path = Bundle(for: Self.self).url(forResource: "flowers", withExtension: "json") else {
+            return nil
+        }
+        
+        guard let jsonData = try? Data(contentsOf: path) else {
+            return nil
+        }
+        
+        if let flowers = try? JSONDecoder().decode([Flower].self, from: jsonData) {
             return flowers
         }
+        
         return nil
     }
 }
