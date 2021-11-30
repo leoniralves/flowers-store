@@ -9,10 +9,16 @@ import UIKit
 
 final class FlowersListViewController: UIViewController {
     // MARK: - Properties
-    private let flowersListView: FlowersListView = .init(flowers: [.init(name: "", image: "", isFavorite: false)])
-    
     private let presenter: FlowersListPresenterInput
     
+    private lazy var flowersListView: FlowersListView = .init(
+        flowers: [
+            .init(name: "", image: "", isFavorite: false)
+        ],
+        delegate: self
+    )
+    
+    // MARK: - Initializer Methods
     init(presenter: FlowersListPresenterInput = FlowersListPresenter()) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -29,6 +35,14 @@ final class FlowersListViewController: UIViewController {
     }
 }
 
+// MARK: - FlowersListPresenterOutput
 extension FlowersListViewController: FlowersListPresenterOutput {
     
+}
+
+// MARK: - FlowersListViewDelegate
+extension FlowersListViewController: FlowersListViewDelegate {
+    func didTapFavorite() {
+        presenter.didTapFavoriteButton()
+    }
 }

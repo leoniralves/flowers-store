@@ -9,10 +9,14 @@ import Foundation
 import UIKit
 
 protocol FlowerItemCellDelegate: AnyObject {
-    func didTapFavoriteButton()
+    func didTapFavoriteButton(flower: Flower)
 }
 
 final class FlowerItemCell: UICollectionViewCell {
+    // MARK: - Properties
+    private var flower: Flower?
+    private weak var delegate: FlowerItemCellDelegate?
+    
     // MARK: - UI Components
     private lazy var imageView: UIImageView = {
         let imageView: UIImageView = .init()
@@ -39,6 +43,7 @@ final class FlowerItemCell: UICollectionViewCell {
         
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(favoriteImage, for: .normal)
+        button.addTarget(self, action: #selector(didTapFavoriteButton), for: .touchUpInside)
         
         return button
     }()
@@ -54,8 +59,21 @@ final class FlowerItemCell: UICollectionViewCell {
     }
     
     // MARK: - Public Methods
-    func setup(flower: Flower, delegate: FlowerItemCellDelegate?) {
-        print("\(Self.self) \(#function)")
+    func setup(
+        flower: Flower,
+        delegate: FlowerItemCellDelegate?
+    ) {
+        self.flower = flower
+        self.delegate = delegate
+    }
+    
+    // MARK: - Private Methods
+    @objc private func didTapFavoriteButton() {
+        guard let flower = flower else {
+            return
+        }
+        
+        delegate?.didTapFavoriteButton(flower: flower)
     }
 }
 
@@ -87,8 +105,4 @@ extension FlowerItemCell: ViewCode {
     func additionalSetups() {
         backgroundColor = .red
     }
-}
-
-final class FlowerItemCell2: UICollectionViewCell {
-    
 }

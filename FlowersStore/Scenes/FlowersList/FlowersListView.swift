@@ -8,12 +8,13 @@
 import UIKit
 
 protocol FlowersListViewDelegate: AnyObject {
-    func didTapFavorite() 
+    func didTapFavorite()
 }
 
 final class FlowersListView: UIView {
     // MARK: - Properties
     private let flowers: [Flower]
+    private weak var delegate: FlowersListViewDelegate?
     
     // MARK: - UI Components
     private(set) lazy var collectionView: UICollectionView = {
@@ -26,8 +27,12 @@ final class FlowersListView: UIView {
     }()
     
     // MARK: - Initializer Methods
-    init(flowers: [Flower]) {
+    init(
+        flowers: [Flower],
+        delegate: FlowersListViewDelegate?
+    ) {
         self.flowers = flowers
+        self.delegate = delegate
         super.init(frame: .zero)
         setupView()
     }
@@ -68,8 +73,7 @@ extension FlowersListView: UICollectionViewDelegate, UICollectionViewDataSource 
 }
 
 extension FlowersListView: FlowerItemCellDelegate {
-    func didTapFavoriteButton() {
-        
+    func didTapFavoriteButton(flower: Flower)
+        delegate?.didTapFavorite()
     }
-
 }
