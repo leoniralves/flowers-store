@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol FlowersListViewDelegate: AnyObject {
+    func didTapFavorite() 
+}
+
 final class FlowersListView: UIView {
     // MARK: - Properties
     private let flowers: [Flower]
@@ -58,7 +62,14 @@ extension FlowersListView: UICollectionViewDelegate, UICollectionViewDataSource 
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FlowerItemCell.self), for: indexPath) as? FlowerItemCell else {
             return UICollectionViewCell()
         }
-        cell.setup()
+        cell.setup(flower: flowers[indexPath.item], delegate: self)
         return cell
     }
+}
+
+extension FlowersListView: FlowerItemCellDelegate {
+    func didTapFavoriteButton() {
+        
+    }
+
 }

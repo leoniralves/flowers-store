@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol FlowerItemCellDelegate: AnyObject {
+    func didTapFavoriteButton()
+}
+
 final class FlowerItemCell: UICollectionViewCell {
     // MARK: - UI Components
     private lazy var imageView: UIImageView = {
@@ -50,7 +54,7 @@ final class FlowerItemCell: UICollectionViewCell {
     }
     
     // MARK: - Public Methods
-    func setup() {
+    func setup(flower: Flower, delegate: FlowerItemCellDelegate?) {
         print("\(Self.self) \(#function)")
     }
 }

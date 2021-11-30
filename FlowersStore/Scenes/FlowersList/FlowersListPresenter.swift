@@ -18,7 +18,11 @@ protocol FlowersListPresenterOutput: AnyObject {
 
 final class FlowersListPresenter {
     private weak var output: FlowersListPresenterOutput?
+    private let interactor: FlowersListInteractorInput
     
+    init(interactor: FlowersListInteractorInput = FlowersListInteractor()) {
+        self.interactor = interactor
+    }
     
     func setOutput(_ output: FlowersListPresenterOutput?) {
         self.output = output
@@ -26,9 +30,6 @@ final class FlowersListPresenter {
 }
 
 extension FlowersListPresenter: FlowersListPresenterInput {
-    
-    
-    
     func didTapFavoriteButton() {
         
     }
