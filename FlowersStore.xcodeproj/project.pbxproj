@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		068901E0273A9E4400CE4F32 /* FlowersListCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068901DF273A9E4400CE4F32 /* FlowersListCollectionViewFlowLayout.swift */; };
+		06C3F59C27564DC1005DAC19 /* FlowersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C3F59B27564DC1005DAC19 /* FlowersListPresenter.swift */; };
 		06C491BF272981F3005C6CF2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06C491BE272981F3005C6CF2 /* GoogleService-Info.plist */; };
 		584939CC273BF5BA00746224 /* FlowersListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584939CB273BF5BA00746224 /* FlowersListViewTests.swift */; };
 		88BD0DD22732B77D00EB958B /* FlowerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD0DD12732B77D00EB958B /* FlowerItemCell.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		068901DF273A9E4400CE4F32 /* FlowersListCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersListCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		06C3F59B27564DC1005DAC19 /* FlowersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersListPresenter.swift; sourceTree = "<group>"; };
 		06C491BE272981F3005C6CF2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		584939CB273BF5BA00746224 /* FlowersListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersListViewTests.swift; sourceTree = "<group>"; };
 		88BD0DD12732B77D00EB958B /* FlowerItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerItemCell.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				9B06DF77272ACD6F00DA2F83 /* FlowersListView.swift */,
 				88BD0DD12732B77D00EB958B /* FlowerItemCell.swift */,
 				068901DF273A9E4400CE4F32 /* FlowersListCollectionViewFlowLayout.swift */,
+				06C3F59B27564DC1005DAC19 /* FlowersListPresenter.swift */,
 			);
 			path = FlowersList;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06C3F59C27564DC1005DAC19 /* FlowersListPresenter.swift in Sources */,
 				9B06DF74272ACC0B00DA2F83 /* FlowersListViewController.swift in Sources */,
 				C88A1FE6272AD1B600ECCBDE /* ViewCode.swift in Sources */,
 				9B172BA6274E66F0009230AE /* Flower.swift in Sources */,
