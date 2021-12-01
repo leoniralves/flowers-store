@@ -35,6 +35,6 @@ extension FlowersListPresenter: FlowersListPresenterInput {
     }
     
     func getFlower() -> Flower {
-        return .init(name: "", image: "", isFavorite: false)
+        return .init(id: 0, name: "", image: "", isFavorite: false)
     }
 }

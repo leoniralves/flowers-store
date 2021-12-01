@@ -10,7 +10,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "${SRCROOT}/XCMetrics/XCMetricsLauncher ${SRCROOT}/XCMetrics/xcmetrics --name ${TARGET_NAME} --buildDir ${BUILD_DIR} --isCI false --skipNotes false --serviceURL https://d074-177-104-65-251.ngrok.io/v1/metrics&#10;">
+               scriptText = "${SRCROOT}/XCMetrics/XCMetricsLauncher ${SRCROOT}/XCMetrics/xcmetrics --name ${TARGET_NAME} --buildDir ${BUILD_DIR} --isCI false --skipNotes false --serviceURL https://dd10-186-235-100-209.ngrok.io/v1/metrics&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"

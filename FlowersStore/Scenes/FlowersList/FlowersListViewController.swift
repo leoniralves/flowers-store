@@ -13,7 +13,7 @@ final class FlowersListViewController: UIViewController {
     
     private lazy var flowersListView: FlowersListView = .init(
         flowers: [
-            .init(name: "", image: "", isFavorite: false)
+            .init(id: 0, name: "", image: "", isFavorite: false)
         ],
         delegate: self
     )

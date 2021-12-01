@@ -73,7 +73,7 @@ extension FlowersListView: UICollectionViewDelegate, UICollectionViewDataSource 
 }
 
 extension FlowersListView: FlowerItemCellDelegate {
-    func didTapFavoriteButton(flower: Flower)
+    func didTapFavoriteButton(flower: Flower) {
         delegate?.didTapFavorite()
     }
 }
