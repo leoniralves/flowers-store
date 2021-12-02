@@ -37,7 +37,7 @@ final class FlowerItemCell: UICollectionViewCell {
         return titleLabel
     }()
     
-    private lazy var favoriteButton: UIButton = {
+    private(set) lazy var favoriteButton: UIButton = {
         let button: UIButton = .init()
         let favoriteImage: UIImage? = .init(systemName: "heart")
         

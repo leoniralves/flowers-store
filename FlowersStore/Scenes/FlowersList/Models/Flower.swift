@@ -6,8 +6,8 @@
 //
 
 struct Flower: Identifiable, Decodable {
-    var id: Int
-    var name: String
-    var image: String
-    var isFavorite: Bool
+    let id: Int
+    let name: String
+    let image: String
+    let isFavorite: Bool
 }
