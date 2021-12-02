@@ -70,6 +70,10 @@ extension FlowersListView: UICollectionViewDelegate, UICollectionViewDataSource 
         cell.setup(flower: flowers[indexPath.item], delegate: self)
         return cell
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
 }
 
 extension FlowersListView: FlowerItemCellDelegate {
