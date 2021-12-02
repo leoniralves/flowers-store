@@ -10,9 +10,13 @@ import XCTest
 
 final class FlowerItemCellDelegateSpy: FlowerItemCellDelegate {
     
+    @VerifyMethodArgs<Flower>
+    private(set) var verifyDidTapFavoriteButton
+    
     func didTapFavoriteButton(flower: Flower) {
-        
+        verifyDidTapFavoriteButton.append(args: flower)
     }
+    
 }
 
 final class FlowerItemCellTests: XCTestCase {
@@ -24,6 +28,8 @@ final class FlowerItemCellTests: XCTestCase {
         
         sut.setup(flower: .make(), delegate: flowerItemCellDelegateSpy)
         sut.favoriteButton.tap()
+        flowerItemCellDelegateSpy.verifyDidTapFavoriteButton.wasCalledOnce()
+        XCTAssertEqual(flowerItemCellDelegateSpy.verifyDidTapFavoriteButton.getArgument(), .make())
     }
 }
 

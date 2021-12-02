@@ -10,6 +10,11 @@
 		068901E0273A9E4400CE4F32 /* FlowersListCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068901DF273A9E4400CE4F32 /* FlowersListCollectionViewFlowLayout.swift */; };
 		06C3F59C27564DC1005DAC19 /* FlowersListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C3F59B27564DC1005DAC19 /* FlowersListPresenter.swift */; };
 		06C491BF272981F3005C6CF2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06C491BE272981F3005C6CF2 /* GoogleService-Info.plist */; };
+		583793CF2758F78D00B4517D /* ManagerVerifyMethodVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583793C92758F78900B4517D /* ManagerVerifyMethodVoid.swift */; };
+		583793D02758F78D00B4517D /* ManagerVerifyMethodProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583793CA2758F78900B4517D /* ManagerVerifyMethodProtocol.swift */; };
+		583793D12758F78D00B4517D /* VerifyMethodArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583793CB2758F78900B4517D /* VerifyMethodArgs.swift */; };
+		583793D22758F78D00B4517D /* VerifyMethodVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583793CC2758F78900B4517D /* VerifyMethodVoid.swift */; };
+		583793D32758F78D00B4517D /* ManagerVerifyMethodArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583793CD2758F78900B4517D /* ManagerVerifyMethodArguments.swift */; };
 		5838A731275650A000253254 /* FlowersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5838A730275650A000253254 /* FlowersListInteractor.swift */; };
 		584939CC273BF5BA00746224 /* FlowersListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584939CB273BF5BA00746224 /* FlowersListViewTests.swift */; };
 		88BD0DD22732B77D00EB958B /* FlowerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD0DD12732B77D00EB958B /* FlowerItemCell.swift */; };
@@ -45,6 +50,11 @@
 		068901DF273A9E4400CE4F32 /* FlowersListCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersListCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		06C3F59B27564DC1005DAC19 /* FlowersListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersListPresenter.swift; sourceTree = "<group>"; };
 		06C491BE272981F3005C6CF2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		583793C92758F78900B4517D /* ManagerVerifyMethodVoid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerVerifyMethodVoid.swift; sourceTree = "<group>"; };
+		583793CA2758F78900B4517D /* ManagerVerifyMethodProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerVerifyMethodProtocol.swift; sourceTree = "<group>"; };
+		583793CB2758F78900B4517D /* VerifyMethodArgs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyMethodArgs.swift; sourceTree = "<group>"; };
+		583793CC2758F78900B4517D /* VerifyMethodVoid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyMethodVoid.swift; sourceTree = "<group>"; };
+		583793CD2758F78900B4517D /* ManagerVerifyMethodArguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerVerifyMethodArguments.swift; sourceTree = "<group>"; };
 		5838A730275650A000253254 /* FlowersListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersListInteractor.swift; sourceTree = "<group>"; };
 		584939CB273BF5BA00746224 /* FlowersListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersListViewTests.swift; sourceTree = "<group>"; };
 		88BD0DD12732B77D00EB958B /* FlowerItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerItemCell.swift; sourceTree = "<group>"; };
@@ -102,6 +112,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		583793D62758F7B100B4517D /* VerifyMethodWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				583793CD2758F78900B4517D /* ManagerVerifyMethodArguments.swift */,
+				583793CA2758F78900B4517D /* ManagerVerifyMethodProtocol.swift */,
+				583793C92758F78900B4517D /* ManagerVerifyMethodVoid.swift */,
+				583793CB2758F78900B4517D /* VerifyMethodArgs.swift */,
+				583793CC2758F78900B4517D /* VerifyMethodVoid.swift */,
+			);
+			path = VerifyMethodWrapper;
+			sourceTree = "<group>";
+		};
 		9724774E27297CC600158DD9 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +162,7 @@
 		9724777027297CCD00158DD9 /* FlowersStoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				583793D62758F7B100B4517D /* VerifyMethodWrapper */,
 				C8E24D18274D14C9008B5F6E /* Mocks */,
 				C88A208F273BF00C00ECCBDE /* FlowersList */,
 			);
@@ -444,8 +467,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				583793D32758F78D00B4517D /* ManagerVerifyMethodArguments.swift in Sources */,
 				C88A2091273BF05700ECCBDE /* FlowerListViewControllerTests.swift in Sources */,
+				583793D22758F78D00B4517D /* VerifyMethodVoid.swift in Sources */,
+				583793D12758F78D00B4517D /* VerifyMethodArgs.swift in Sources */,
+				583793D02758F78D00B4517D /* ManagerVerifyMethodProtocol.swift in Sources */,
 				C8E24D202758F385008B5F6E /* FlowerItemCellTests.swift in Sources */,
+				583793CF2758F78D00B4517D /* ManagerVerifyMethodVoid.swift in Sources */,
 				584939CC273BF5BA00746224 /* FlowersListViewTests.swift in Sources */,
 				97FD600A274E6C060031E1C6 /* FlowerTests.swift in Sources */,
 			);
