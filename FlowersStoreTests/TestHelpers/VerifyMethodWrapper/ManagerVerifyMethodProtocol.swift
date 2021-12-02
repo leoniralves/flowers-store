@@ -51,7 +51,6 @@ protocol ManagerVerifyMethodProtocol {
 }
 
 extension ManagerVerifyMethodProtocol {
-    
     @discardableResult
     func wasCalledOnce(
         file: StaticString = #file,
