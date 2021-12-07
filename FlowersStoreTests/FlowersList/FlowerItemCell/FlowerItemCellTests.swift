@@ -8,22 +8,38 @@
 import XCTest
 @testable import FlowersStore
 
-final class FlowerItemCellDelegateSpy: FlowerItemCellDelegate {
-    
-    func didTapFavoriteButton(flower: Flower) {
-        
-    }
-}
-
 final class FlowerItemCellTests: XCTestCase {
-    
+    // MARK: - Properties
     private let flowerItemCellDelegateSpy: FlowerItemCellDelegateSpy = .init()
     private let sut: FlowerItemCell = .init(frame: .zero)
     
-    func test_didTapFavoriteButton_() {
+    // MARK: - Test Methods
+    func test_didTapFavoriteButton_whenUserTouchUpInsideButton_andFlowerIsNotNil_shouldCallFavoriteDelegate() {
+        let dummy: Flower = .make()
         
-        sut.setup(flower: .make(), delegate: flowerItemCellDelegateSpy)
+        sut.setup(flower: dummy, delegate: flowerItemCellDelegateSpy)
         sut.favoriteButton.tap()
+        
+        thenAssertFlowerIs(flower: dummy)
+    }
+}
+
+extension FlowerItemCellTests {
+    func thenAssertFlowerIs(
+        flower: Flower,
+        file: StaticString = #file,
+        line: UInt = #line
+    ) {
+        guard flowerItemCellDelegateSpy.verifyDidTapFavoriteButton.wasCalledOnce() else {
+            return
+        }
+        
+        XCTAssertEqual(
+            flowerItemCellDelegateSpy.verifyDidTapFavoriteButton.getArgument(),
+            flower,
+            file: file,
+            line: line
+        )
     }
 }
 
