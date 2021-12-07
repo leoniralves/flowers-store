@@ -60,7 +60,7 @@ final class FlowerItemCell: UICollectionViewCell {
     
     // MARK: - Public Methods
     func setup(
-        flower: Flower,
+        flower: Flower?,
         delegate: FlowerItemCellDelegate?
     ) {
         self.flower = flower

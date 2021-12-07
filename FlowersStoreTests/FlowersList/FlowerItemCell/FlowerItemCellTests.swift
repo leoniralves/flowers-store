@@ -22,6 +22,14 @@ final class FlowerItemCellTests: XCTestCase {
         
         thenAssertFlowerIs(flower: dummy)
     }
+
+    func test_didTapFavoriteButton_whenUserTouchUpInsideButton_andFlowerIsNil_shouldNeverCallFavoriteDelegate() {
+        
+        sut.setup(flower: nil, delegate: flowerItemCellDelegateSpy)
+        sut.favoriteButton.tap()
+        
+        flowerItemCellDelegateSpy.verifyDidTapFavoriteButton.wasNeverCalled()
+    }
 }
 
 extension FlowerItemCellTests {
