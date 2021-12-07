@@ -72,7 +72,7 @@ final class FlowerItemCell: UICollectionViewCell {
     
     // MARK: - Private Methods
     private func setupLayout() {
-        imageView.image = imageDownloadProtocol?.getImage(with: <#T##String#>)
+        imageView.image = imageDownloadProtocol?.getImage(for: "")
         titleLabel.text = flower?.name
     }
     

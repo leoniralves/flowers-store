@@ -67,7 +67,7 @@ extension FlowersListView: UICollectionViewDelegate, UICollectionViewDataSource 
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FlowerItemCell.self), for: indexPath) as? FlowerItemCell else {
             return UICollectionViewCell()
         }
-        cell.setup(flower: flowers[indexPath.item], delegate: self)
+        cell.setup(flower: flowers[indexPath.item], imageDownloadProtocol: nil, delegate: self)
         return cell
     }
 

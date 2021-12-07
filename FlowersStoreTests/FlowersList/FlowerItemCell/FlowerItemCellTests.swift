@@ -8,6 +8,16 @@
 import XCTest
 @testable import FlowersStore
 
+final class ImageDownloadProtocolSpy: ImageDownloadProtocol {
+    
+    var getImageToBeReturned: UIImage? = nil
+    
+    func getImage(for url: String) -> UIImage? {
+        getImageToBeReturned
+    }
+    
+}
+
 final class FlowerItemCellTests: XCTestCase {
     // MARK: - Properties
     private let flowerItemCellDelegateSpy: FlowerItemCellDelegateSpy = .init()
@@ -15,7 +25,7 @@ final class FlowerItemCellTests: XCTestCase {
     
     // MARK: - Test Methods
     func test_didTapFavoriteButton_whenUserTouchUpInsideButton_andFlowerIsNil_shouldNeverCallFavoriteDelegate() {
-        sut.setup(flower: nil, delegate: flowerItemCellDelegateSpy)
+        sut.setup(flower: nil, imageDownloadProtocol: nil, delegate: flowerItemCellDelegateSpy)
         sut.favoriteButton.tap()
         
         flowerItemCellDelegateSpy.verifyDidTapFavoriteButton.wasNeverCalled()
@@ -24,20 +34,27 @@ final class FlowerItemCellTests: XCTestCase {
     func test_didTapFavoriteButton_whenUserTouchUpInsideButton_andFlowerIsNotNil_shouldCallFavoriteDelegate() {
         let dummy: Flower = .make()
         
-        sut.setup(flower: dummy, delegate: flowerItemCellDelegateSpy)
+        sut.setup(flower: dummy, imageDownloadProtocol: nil, delegate: flowerItemCellDelegateSpy)
         sut.favoriteButton.tap()
         
         thenAssertFlowerIs(flower: dummy)
     }
     
     func test_setup_whenFlowerIsNotNil_andFlowerPropertiesAreValid_shouldSetupCellLayout() {
+        let imageDownloadProtocolSpy: ImageDownloadProtocolSpy = .init()
+        let dummyImage: UIImage = UIImage()
+        imageDownloadProtocolSpy.getImageToBeReturned = dummyImage
         let dummy: Flower = .make()
         
-        sut.setup(flower: dummy, delegate: flowerItemCellDelegateSpy)
+        sut.setup(
+            flower: dummy,
+            imageDownloadProtocol: imageDownloadProtocolSpy,
+            delegate: flowerItemCellDelegateSpy
+        )
         
         
         XCTAssertNotNil(sut.titleLabel.text)
-        XCTAssertNotNil(sut.imageView.image)
+        XCTAssertEqual(sut.imageView.image, dummyImage)
     }
 }
 
