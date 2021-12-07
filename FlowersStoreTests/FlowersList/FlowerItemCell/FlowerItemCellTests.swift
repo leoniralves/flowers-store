@@ -14,6 +14,13 @@ final class FlowerItemCellTests: XCTestCase {
     private let sut: FlowerItemCell = .init(frame: .zero)
     
     // MARK: - Test Methods
+    func test_didTapFavoriteButton_whenUserTouchUpInsideButton_andFlowerIsNil_shouldNeverCallFavoriteDelegate() {
+        sut.setup(flower: nil, delegate: flowerItemCellDelegateSpy)
+        sut.favoriteButton.tap()
+        
+        flowerItemCellDelegateSpy.verifyDidTapFavoriteButton.wasNeverCalled()
+    }
+    
     func test_didTapFavoriteButton_whenUserTouchUpInsideButton_andFlowerIsNotNil_shouldCallFavoriteDelegate() {
         let dummy: Flower = .make()
         
@@ -22,13 +29,14 @@ final class FlowerItemCellTests: XCTestCase {
         
         thenAssertFlowerIs(flower: dummy)
     }
-
-    func test_didTapFavoriteButton_whenUserTouchUpInsideButton_andFlowerIsNil_shouldNeverCallFavoriteDelegate() {
+    
+    func test_setup_whenFlowerIsNotNil_andFlowerPropertiesAreValid_shouldSetupCellLayout() {
+        let dummy: Flower = .make()
         
-        sut.setup(flower: nil, delegate: flowerItemCellDelegateSpy)
-        sut.favoriteButton.tap()
+        sut.setup(flower: dummy, delegate: flowerItemCellDelegateSpy)
         
-        flowerItemCellDelegateSpy.verifyDidTapFavoriteButton.wasNeverCalled()
+        XCTAssertNotNil(sut.titleLabel.text)
+        XCTAssertNotNil(sut.imageView.image)
     }
 }
 

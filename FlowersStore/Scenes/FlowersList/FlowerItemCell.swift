@@ -18,7 +18,7 @@ final class FlowerItemCell: UICollectionViewCell {
     private weak var delegate: FlowerItemCellDelegate?
     
     // MARK: - UI Components
-    private lazy var imageView: UIImageView = {
+    private(set) lazy var imageView: UIImageView = {
         let imageView: UIImageView = .init()
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -32,7 +32,6 @@ final class FlowerItemCell: UICollectionViewCell {
         let titleLabel: UILabel = .init()
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.text = "Rosa"
         
         return titleLabel
     }()
@@ -65,9 +64,14 @@ final class FlowerItemCell: UICollectionViewCell {
     ) {
         self.flower = flower
         self.delegate = delegate
+        setupLayout()
     }
     
     // MARK: - Private Methods
+    private func setupLayout() {
+        titleLabel.text = flower?.name
+    }
+    
     @objc private func didTapFavoriteButton() {
         guard let flower = flower else {
             return
