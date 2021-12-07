@@ -35,6 +35,7 @@ final class FlowerItemCellTests: XCTestCase {
         
         sut.setup(flower: dummy, delegate: flowerItemCellDelegateSpy)
         
+        
         XCTAssertNotNil(sut.titleLabel.text)
         XCTAssertNotNil(sut.imageView.image)
     }

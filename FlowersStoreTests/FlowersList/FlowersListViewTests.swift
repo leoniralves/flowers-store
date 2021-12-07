@@ -64,7 +64,7 @@ final class FlowersListViewTests: XCTestCase {
     func test_cellForRow_onCollectionViewCell_titleLabelContainsExpectedContent() {
         let cell: FlowerItemCell? = givenCell() as? FlowerItemCell
         
-        XCTAssertEqual(cell?.titleLabel.text, "Rosa")
+        XCTAssertEqual(cell?.titleLabel.text, "PlantDummy_1")
     }
     
     private func givenCell(dummyIndexPath: IndexPath = .init(item: 0, section: 0)) -> UICollectionViewCell? {

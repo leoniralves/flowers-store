@@ -16,6 +16,7 @@ final class FlowerItemCell: UICollectionViewCell {
     // MARK: - Properties
     private var flower: Flower?
     private weak var delegate: FlowerItemCellDelegate?
+    private var imageDownloadProtocol: ImageDownloadProtocol?
     
     // MARK: - UI Components
     private(set) lazy var imageView: UIImageView = {
@@ -60,15 +61,18 @@ final class FlowerItemCell: UICollectionViewCell {
     // MARK: - Public Methods
     func setup(
         flower: Flower?,
+        imageDownloadProtocol: ImageDownloadProtocol?,
         delegate: FlowerItemCellDelegate?
     ) {
         self.flower = flower
         self.delegate = delegate
+        self.imageDownloadProtocol = imageDownloadProtocol
         setupLayout()
     }
     
     // MARK: - Private Methods
     private func setupLayout() {
+        imageView.image = imageDownloadProtocol?.getImage(with: <#T##String#>)
         titleLabel.text = flower?.name
     }
     
