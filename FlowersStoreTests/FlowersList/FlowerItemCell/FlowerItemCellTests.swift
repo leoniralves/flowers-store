@@ -8,20 +8,11 @@
 import XCTest
 @testable import FlowersStore
 
-final class ImageDownloadProtocolSpy: ImageDownloadProtocol {
-    
-    var getImageToBeReturned: UIImage? = nil
-    
-    func getImage(for url: String) -> UIImage? {
-        getImageToBeReturned
-    }
-    
-}
-
 final class FlowerItemCellTests: XCTestCase {
     // MARK: - Properties
     private let flowerItemCellDelegateSpy: FlowerItemCellDelegateSpy = .init()
     private let sut: FlowerItemCell = .init(frame: .zero)
+    private let imageDownloadProtocolSpy: ImageDownloadProtocolSpy = .init()
     
     // MARK: - Test Methods
     func test_didTapFavoriteButton_whenUserTouchUpInsideButton_andFlowerIsNil_shouldNeverCallFavoriteDelegate() {
@@ -41,10 +32,9 @@ final class FlowerItemCellTests: XCTestCase {
     }
     
     func test_setup_whenFlowerIsNotNil_andFlowerPropertiesAreValid_shouldSetupCellLayout() {
-        let imageDownloadProtocolSpy: ImageDownloadProtocolSpy = .init()
         let dummyImage: UIImage = UIImage()
-        imageDownloadProtocolSpy.getImageToBeReturned = dummyImage
         let dummy: Flower = .make()
+        imageDownloadProtocolSpy.getImageToBeReturned = dummyImage
         
         sut.setup(
             flower: dummy,
@@ -55,6 +45,9 @@ final class FlowerItemCellTests: XCTestCase {
         
         XCTAssertNotNil(sut.titleLabel.text)
         XCTAssertEqual(sut.imageView.image, dummyImage)
+        XCTAssertEqual(imageDownloadProtocolSpy.verifyGetImage.getArgument(), dummy.image)
+        imageDownloadProtocolSpy.verifyGetImage.wasCalledOnce()
+        
     }
 }
 

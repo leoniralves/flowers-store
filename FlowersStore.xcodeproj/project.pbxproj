@@ -17,6 +17,7 @@
 		583793D32758F78D00B4517D /* ManagerVerifyMethodArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583793CD2758F78900B4517D /* ManagerVerifyMethodArguments.swift */; };
 		5838A731275650A000253254 /* FlowersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5838A730275650A000253254 /* FlowersListInteractor.swift */; };
 		584939CC273BF5BA00746224 /* FlowersListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584939CB273BF5BA00746224 /* FlowersListViewTests.swift */; };
+		584B47F22760D9B000054511 /* ImageDownloadProtocolSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584B47F12760D9B000054511 /* ImageDownloadProtocolSpy.swift */; };
 		88BD0DD22732B77D00EB958B /* FlowerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD0DD12732B77D00EB958B /* FlowerItemCell.swift */; };
 		925B13AB275F8F8400747A10 /* ImageDownloadProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925B13AA275F8F8400747A10 /* ImageDownloadProtocol.swift */; };
 		9724775B27297CC600158DD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724775A27297CC600158DD9 /* AppDelegate.swift */; };
@@ -60,8 +61,9 @@
 		583793CD2758F78900B4517D /* ManagerVerifyMethodArguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerVerifyMethodArguments.swift; sourceTree = "<group>"; };
 		5838A730275650A000253254 /* FlowersListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersListInteractor.swift; sourceTree = "<group>"; };
 		584939CB273BF5BA00746224 /* FlowersListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersListViewTests.swift; sourceTree = "<group>"; };
+		584B47F12760D9B000054511 /* ImageDownloadProtocolSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadProtocolSpy.swift; sourceTree = "<group>"; };
 		88BD0DD12732B77D00EB958B /* FlowerItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerItemCell.swift; sourceTree = "<group>"; };
-		925B13AA275F8F8400747A10 /* ImageDownloadProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadProtocol.swift; sourceTree = SOURCE_ROOT; };
+		925B13AA275F8F8400747A10 /* ImageDownloadProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageDownloadProtocol.swift; path = FlowersStore/Utils/Protocols/ImageDownloadProtocol.swift; sourceTree = SOURCE_ROOT; };
 		943D62C7FB6E913807C3C76D /* Pods-FlowersStoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowersStoreTests.debug.xcconfig"; path = "Target Support Files/Pods-FlowersStoreTests/Pods-FlowersStoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9724775727297CC600158DD9 /* FlowersStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowersStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9724775A27297CC600158DD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,14 @@
 				583793CC2758F78900B4517D /* VerifyMethodVoid.swift */,
 			);
 			path = VerifyMethodWrapper;
+			sourceTree = "<group>";
+		};
+		584B47F02760D92000054511 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				925B13AA275F8F8400747A10 /* ImageDownloadProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		9724774E27297CC600158DD9 = {
@@ -225,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				9BB27D982758F9DF002CA24E /* FlowerItemCellDelegateSpy.swift */,
+				584B47F12760D9B000054511 /* ImageDownloadProtocolSpy.swift */,
 			);
 			path = Spy;
 			sourceTree = "<group>";
@@ -241,7 +252,7 @@
 		C88A1FE3272AD19000ECCBDE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				C8E24D19274D152D008B5F6E /* Protocols */,
+				584B47F02760D92000054511 /* Protocols */,
 				C88A1FE4272AD1A600ECCBDE /* Layout */,
 			);
 			path = Utils;
@@ -274,14 +285,6 @@
 				C8E24D1A274D158E008B5F6E /* UICollectionViewStub.swift */,
 			);
 			path = Mocks;
-			sourceTree = "<group>";
-		};
-		C8E24D19274D152D008B5F6E /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				925B13AA275F8F8400747A10 /* ImageDownloadProtocol.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		C8E24D1E2758F35C008B5F6E /* FlowerItemCell */ = {
@@ -499,6 +502,7 @@
 				9BB27D992758F9DF002CA24E /* FlowerItemCellDelegateSpy.swift in Sources */,
 				583793D12758F78D00B4517D /* VerifyMethodArgs.swift in Sources */,
 				583793D02758F78D00B4517D /* ManagerVerifyMethodProtocol.swift in Sources */,
+				584B47F22760D9B000054511 /* ImageDownloadProtocolSpy.swift in Sources */,
 				9BB27D9C2758FB7F002CA24E /* TestHelpers.swift in Sources */,
 				C8E24D202758F385008B5F6E /* FlowerItemCellTests.swift in Sources */,
 				583793CF2758F78D00B4517D /* ManagerVerifyMethodVoid.swift in Sources */,
