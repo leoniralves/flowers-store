@@ -15,8 +15,16 @@ final class FlowerItemCellTests: XCTestCase {
     private let imageDownloadProtocolSpy: ImageDownloadProtocolSpy = .init()
     
     // MARK: - Test Methods
-    func test_didTapFavoriteButton_whenUserTouchUpInsideButton_andFlowerIsNil_shouldNeverCallFavoriteDelegate() {
-        sut.setup(flower: nil, imageDownloadProtocol: nil, delegate: flowerItemCellDelegateSpy)
+    func test_didTapFavoriteButton_whenSetupNeverCalled_shouldNeverCallFavoriteDelegate() {
+        sut.favoriteButton.tap()
+        
+        flowerItemCellDelegateSpy.verifyDidTapFavoriteButton.wasNeverCalled()
+    }
+    
+    func test_didTapFavoriteButton_whenSetupCalled_withDelegateNil_shouldNeverCallFavoriteDelegate() {
+        let dummy: Flower = .make()
+        sut.setup(flower: dummy, imageDownloadProtocol: nil, delegate: nil)
+        
         sut.favoriteButton.tap()
         
         flowerItemCellDelegateSpy.verifyDidTapFavoriteButton.wasNeverCalled()
