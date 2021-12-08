@@ -30,7 +30,7 @@ final class FlowerItemCellTests: XCTestCase {
         flowerItemCellDelegateSpy.verifyDidTapFavoriteButton.wasNeverCalled()
     }
     
-    func test_didTapFavoriteButton_whenUserTouchUpInsideButton_andFlowerIsNotNil_shouldCallFavoriteDelegate() {
+    func test_didTapFavoriteButton_whenSetupCalled_shouldCallFavoriteDelegate() {
         let dummy: Flower = .make()
         
         sut.setup(flower: dummy, imageDownloadProtocol: nil, delegate: flowerItemCellDelegateSpy)
@@ -53,9 +53,7 @@ final class FlowerItemCellTests: XCTestCase {
         
         XCTAssertNotNil(sut.titleLabel.text)
         XCTAssertEqual(sut.imageView.image, dummyImage)
-        XCTAssertEqual(imageDownloadProtocolSpy.verifyGetImage.getArgument(), dummy.image)
-        imageDownloadProtocolSpy.verifyGetImage.wasCalledOnce()
-        
+        imageDownloadProtocolSpy.verifyGetImageArgs(with: dummy.image)
     }
 }
 

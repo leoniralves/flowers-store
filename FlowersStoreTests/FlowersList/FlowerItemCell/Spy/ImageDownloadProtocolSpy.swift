@@ -21,3 +21,11 @@ final class ImageDownloadProtocolSpy: ImageDownloadProtocol {
         return getImageToBeReturned
     }
 }
+
+extension ImageDownloadProtocolSpy {
+    func verifyGetImageArgs(with path: String, file: StaticString = #file, line: UInt = #line) {
+        guard verifyGetImage.wasCalledOnce(file: file, line: line) else { return }
+
+        XCTAssertEqual(verifyGetImage.getArgument(), path)
+    }
+}
