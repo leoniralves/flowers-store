@@ -14,8 +14,8 @@ protocol FlowerItemCellDelegate: AnyObject {
 
 final class FlowerItemCell: UICollectionViewCell {
     // MARK: - Properties
-    private var flower: Flower?
     private weak var delegate: FlowerItemCellDelegate?
+    private var flower: Flower?
     private var imageDownloadProtocol: ImageDownloadProtocol?
     
     // MARK: - UI Components
@@ -72,7 +72,7 @@ final class FlowerItemCell: UICollectionViewCell {
     
     // MARK: - Private Methods
     private func setupLayout() {
-        imageView.image = imageDownloadProtocol?.getImage(for: "")
+        imageView.image = imageDownloadProtocol?.getImage(for: flower?.image)
         titleLabel.text = flower?.name
     }
     

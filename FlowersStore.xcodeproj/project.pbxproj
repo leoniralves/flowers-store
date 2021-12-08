@@ -29,6 +29,7 @@
 		9B06DF78272ACD6F00DA2F83 /* FlowersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B06DF77272ACD6F00DA2F83 /* FlowersListView.swift */; };
 		9B172BA6274E66F0009230AE /* Flower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B172BA5274E66F0009230AE /* Flower.swift */; };
 		9B172BAA274E6922009230AE /* flowers.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B172BA9274E6922009230AE /* flowers.json */; };
+		9B9A03862760DD36005BFF2C /* Flower+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9A03852760DD36005BFF2C /* Flower+Mock.swift */; };
 		9BB27D992758F9DF002CA24E /* FlowerItemCellDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB27D982758F9DF002CA24E /* FlowerItemCellDelegateSpy.swift */; };
 		9BB27D9C2758FB7F002CA24E /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB27D9B2758FB7F002CA24E /* TestHelpers.swift */; };
 		9C9349D8BB4227FD7CDD5BAE /* Pods_FlowersStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8AE8BBC1D9C5E29DC71435 /* Pods_FlowersStoreTests.framework */; };
@@ -77,6 +78,7 @@
 		9B06DF77272ACD6F00DA2F83 /* FlowersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersListView.swift; sourceTree = "<group>"; };
 		9B172BA5274E66F0009230AE /* Flower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flower.swift; sourceTree = "<group>"; };
 		9B172BA9274E6922009230AE /* flowers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = flowers.json; sourceTree = "<group>"; };
+		9B9A03852760DD36005BFF2C /* Flower+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flower+Mock.swift"; sourceTree = "<group>"; };
 		9BB27D982758F9DF002CA24E /* FlowerItemCellDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerItemCellDelegateSpy.swift; sourceTree = "<group>"; };
 		9BB27D9B2758FB7F002CA24E /* TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		9D8AE8BBC1D9C5E29DC71435 /* Pods_FlowersStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowersStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,6 +233,14 @@
 			path = Stubs;
 			sourceTree = "<group>";
 		};
+		9B9A03842760DD29005BFF2C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9B9A03852760DD36005BFF2C /* Flower+Mock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		9BB27D972758F9CC002CA24E /* Spy */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +300,7 @@
 		C8E24D1E2758F35C008B5F6E /* FlowerItemCell */ = {
 			isa = PBXGroup;
 			children = (
+				9B9A03842760DD29005BFF2C /* Mocks */,
 				9BB27D972758F9CC002CA24E /* Spy */,
 				C8E24D1F2758F385008B5F6E /* FlowerItemCellTests.swift */,
 			);
@@ -496,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B9A03862760DD36005BFF2C /* Flower+Mock.swift in Sources */,
 				583793D32758F78D00B4517D /* ManagerVerifyMethodArguments.swift in Sources */,
 				C88A2091273BF05700ECCBDE /* FlowerListViewControllerTests.swift in Sources */,
 				583793D22758F78D00B4517D /* VerifyMethodVoid.swift in Sources */,

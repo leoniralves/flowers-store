@@ -8,5 +8,5 @@
 import UIKit
 
 protocol ImageDownloadProtocol: AnyObject {
-    func getImage(for url: String) -> UIImage?
+    func getImage(for url: String?) -> UIImage?
 }

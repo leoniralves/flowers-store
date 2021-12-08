@@ -10,15 +10,14 @@ import UIKit
 @testable import FlowersStore
 
 final class ImageDownloadProtocolSpy: ImageDownloadProtocol {
-    
-    @VerifyMethodArgs<String>
+    @VerifyMethodArgs<String?>
     private(set) var verifyGetImage
     
     var getImageToBeReturned: UIImage? = nil
     
-    func getImage(for url: String) -> UIImage? {
+    func getImage(for url: String?) -> UIImage? {
         verifyGetImage.append(args: url)
+        
         return getImageToBeReturned
     }
-    
 }

@@ -34,6 +34,7 @@ final class FlowerItemCellTests: XCTestCase {
     func test_setup_whenFlowerIsNotNil_andFlowerPropertiesAreValid_shouldSetupCellLayout() {
         let dummyImage: UIImage = UIImage()
         let dummy: Flower = .make()
+        
         imageDownloadProtocolSpy.getImageToBeReturned = dummyImage
         
         sut.setup(
@@ -41,7 +42,6 @@ final class FlowerItemCellTests: XCTestCase {
             imageDownloadProtocol: imageDownloadProtocolSpy,
             delegate: flowerItemCellDelegateSpy
         )
-        
         
         XCTAssertNotNil(sut.titleLabel.text)
         XCTAssertEqual(sut.imageView.image, dummyImage)
@@ -51,6 +51,7 @@ final class FlowerItemCellTests: XCTestCase {
     }
 }
 
+// MARK: - Assertion Methods
 extension FlowerItemCellTests {
     func thenAssertFlowerIs(
         flower: Flower,
@@ -73,21 +74,5 @@ extension FlowerItemCellTests {
 extension UIButton {
     func tap() {
         self.sendActions(for: .touchUpInside)
-    }
-}
-
-extension Flower {
-    static func make(
-        id: Int = 1,
-        name: String = "dummyName",
-        image: String = "dummyImage",
-        isFavorite: Bool = false
-    ) -> Self {
-        .init(
-            id: id,
-            name: name,
-            image: image,
-            isFavorite: isFavorite
-        )
     }
 }
