@@ -15,8 +15,7 @@ final class FlowersListViewController: UIViewController {
         flowers: [
             .init(id: 0, name: "", image: "", isFavorite: false)
         ],
-        delegate: self,
-        imageDownload: ImageDownload()
+        delegate: self
     )
     
     // MARK: - Initializer Methods

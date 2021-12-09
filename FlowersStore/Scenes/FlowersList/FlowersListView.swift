@@ -29,7 +29,7 @@ final class FlowersListView: UIView {
     // MARK: - Initializer Methods
     init(
         flowers: [Flower],
-        delegate: FlowersListViewDelegate?,
+        delegate: FlowersListViewDelegate?
     ) {
         self.flowers = flowers
         self.delegate = delegate
