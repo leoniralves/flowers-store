@@ -15,7 +15,6 @@ final class FlowersListView: UIView {
     // MARK: - Properties
     private let flowers: [Flower]
     private weak var delegate: FlowersListViewDelegate?
-    private let imageDownload: ImageDownloadProtocol
     
     // MARK: - UI Components
     private(set) lazy var collectionView: UICollectionView = {
@@ -31,11 +30,9 @@ final class FlowersListView: UIView {
     init(
         flowers: [Flower],
         delegate: FlowersListViewDelegate?,
-        imageDownload: ImageDownloadProtocol
     ) {
         self.flowers = flowers
         self.delegate = delegate
-        self.imageDownload = imageDownload
         super.init(frame: .zero)
         setupView()
     }
@@ -70,7 +67,7 @@ extension FlowersListView: UICollectionViewDelegate, UICollectionViewDataSource 
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FlowerItemCell.self), for: indexPath) as? FlowerItemCell else {
             return UICollectionViewCell()
         }
-        cell.setup(flower: flowers[indexPath.item], imageDownloadProtocol: imageDownload, delegate: self)
+        cell.setup(flower: flowers[indexPath.item], imageDownloadProtocol: ImageDownload(), delegate: self)
         return cell
     }
 
