@@ -19,7 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow.init(windowScene: scene)
-        window?.rootViewController = FlowersListViewController()
+        let nav: UINavigationController = .init(rootViewController: FlowersListViewController())
+        window?.rootViewController = nav
         window?.makeKeyAndVisible()
     }
 

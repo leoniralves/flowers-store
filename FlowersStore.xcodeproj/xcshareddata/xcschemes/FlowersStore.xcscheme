@@ -10,7 +10,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "${SRCROOT}/XCMetrics/XCMetricsLauncher ${SRCROOT}/XCMetrics/xcmetrics --name ${TARGET_NAME} --buildDir ${BUILD_DIR} --isCI false --skipNotes false --serviceURL https://a496-186-235-100-211.ngrok.io/v1/metrics&#10;">
+               scriptText = "${SRCROOT}/XCMetrics/XCMetricsLauncher ${SRCROOT}/XCMetrics/xcmetrics --name ${TARGET_NAME} --buildDir ${BUILD_DIR} --isCI false --skipNotes false --serviceURL https://5ea4-177-104-65-239.ngrok.io/v1/metrics&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
@@ -44,7 +44,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">

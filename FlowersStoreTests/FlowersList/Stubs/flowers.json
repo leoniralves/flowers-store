@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Rosa",
+        "image": "rosa.jpg",
+        "isFavorite": true
+    },
+    
+    {
+        "id": 2,
+        "name": "Cravo",
+        "image": "cravo.jpg",
+        "isFavorite": false
+    },
+    
+    {
+        "id": 3,
+        "name": "Dente de Leão",
+        "image": "dente-leao.jpg",
+        "isFavorite": true
+    }
+]
