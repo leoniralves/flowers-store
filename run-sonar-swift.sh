@@ -145,10 +145,10 @@ vflag=""
 nflag=""
 unittests="on"
 swiftlint="on"
-tailor="on"
+tailor="off"
 lizard="on"
-oclint="on"
-fauxpas="on"
+oclint="off"
+fauxpas="off"
 sonarscanner=""
 sonarurl=""
 sonarlogin=""
@@ -526,6 +526,8 @@ if [ "$lizard" = "on" ]; then
 	if hash $LIZARD_CMD 2>/dev/null; then
 		echo -n 'Running Lizard...'
   		$LIZARD_CMD --xml "$srcDirs" > sonar-reports/lizard-report.xml
+
+		echo "### $LIZARD_CMD --xml $srcDirs"
   	else
   		echo 'Skipping Lizard (not installed!)'
   	fi
