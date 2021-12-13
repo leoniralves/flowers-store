@@ -15,8 +15,7 @@ final class FlowersListViewTests: XCTestCase {
             .init(id: 1, name: "PlantDummy_1", image: "http://dummy_1.com", isFavorite: false),
             .init(id: 2, name: "PlantDummy_2", image: "http://dummy_2.com", isFavorite: false)
         ],
-        delegate: nil,
-        imageDownload: ImageDownload()
+        delegate: nil
     )
     
     // MARK: - Computed Properties
