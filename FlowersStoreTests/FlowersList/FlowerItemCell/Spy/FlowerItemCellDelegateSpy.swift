@@ -12,7 +12,7 @@ final class FlowerItemCellDelegateSpy: FlowerItemCellDelegate {
     @VerifyMethodArgs<Flower>
     private(set) var verifyDidTapFavoriteButton
     
-    func didTapFavoriteButton(flower: Flower) {
+    func didTapFavoriteButton(_ cell: FlowerItemCell, flower: Flower) {
         verifyDidTapFavoriteButton.append(args: flower)
     }
     
