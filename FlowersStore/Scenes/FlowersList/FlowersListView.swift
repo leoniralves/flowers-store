@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FlowersListViewDelegate: AnyObject {
-    func didTapFavorite()
+    func flowersListView(_ flowersListView: FlowersListView, didTapFavorite flower: Flower)
 }
 
 final class FlowersListView: UIView {
@@ -40,6 +40,11 @@ final class FlowersListView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Public Methods
+    func updateFavorite() {
+//        indexPathForFavoriteItem
     }
 }
 
@@ -73,7 +78,7 @@ extension FlowersListView: UICollectionViewDelegate, UICollectionViewDataSource 
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        //...
     }
 }
 
@@ -81,6 +86,6 @@ extension FlowersListView: FlowerItemCellDelegate {
     func didTapFavoriteButton(_ cell: FlowerItemCell, flower: Flower) {
         indexPathForFavoriteItem = collectionView.indexPath(for: cell)
         
-        delegate?.didTapFavorite()
+        delegate?.flowersListView(self, didTapFavorite: flower)
     }
 }
