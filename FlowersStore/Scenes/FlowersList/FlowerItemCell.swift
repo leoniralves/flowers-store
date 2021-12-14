@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol FlowerItemCellDelegate: AnyObject {
-    func didTapFavoriteButton(flower: Flower)
+    func didTapFavoriteButton(_ cell: FlowerItemCell, flower: Flower)
 }
 
 final class FlowerItemCell: UICollectionViewCell {
@@ -81,7 +81,7 @@ final class FlowerItemCell: UICollectionViewCell {
             return
         }
         
-        delegate?.didTapFavoriteButton(flower: flower)
+        delegate?.didTapFavoriteButton(self, flower: flower)
     }
 }
 

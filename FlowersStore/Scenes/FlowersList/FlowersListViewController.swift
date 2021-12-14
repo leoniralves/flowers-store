@@ -42,7 +42,7 @@ extension FlowersListViewController: FlowersListPresenterOutput {
 
 // MARK: - FlowersListViewDelegate
 extension FlowersListViewController: FlowersListViewDelegate {
-    func didTapFavorite() {
+    func flowersListView(_ flowersListView: FlowersListView, didTapFavorite flower: Flower) {
         presenter.didTapFavoriteButton()
     }
 }
