@@ -1,0 +1,87 @@
+require "rubygems"
+require "json"
+require "pp"
+
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://docs.fastlane.tools/actions
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "2.9.0"
+
+default_platform :ios
+
+platform :ios do
+	lane :metrics do
+		scan(
+			workspace: "FlowersStore.xcworkspace",
+			scheme: "FlowersStore",
+			code_coverage: true,
+			derived_data_path: "./DerivedData",
+			output_directory: "./sonar-reports",
+			test_without_building: false,
+			clean: true,
+			reset_simulator: true
+		)
+
+		slather(
+			cobertura_xml: true,
+			jenkins: false,
+			scheme: "FlowersStore",
+			build_directory: "./DerivedData",
+			output_directory: "./sonar-reports",
+			workspace: "./FlowersStore.xcworkspace",
+			proj: "./FlowersStore.xcodeproj"
+		)
+
+		lizard(
+			source_folder: "./FlowersStore",
+			language: "swift",
+			export_type: "xml",
+			report_file: "./sonar-reports/lizard-report.xml",
+			# Depending on the environment and how lizard have been installed, the
+			# path to the lizard executable may need to be specified.
+			#
+			# Using `pip install --user lizard` as the user executing fastlane will
+			# install lizard in the following directory.
+			executable: "#{ENV["HOME"]}/Library/Python/3.8/lib/python/site-packages/lizard.py"
+		)
+
+		swiftlint(
+			output_file: "./sonar-reports/swiftlint.txt",
+			ignore_exit_status: true
+		)
+
+		sonar_run
+	end
+
+	lane :sonar_run do
+		app_version = get_version_number(
+			xcodeproj: "FlowersStore.xcodeproj",
+			target: "FlowersStore"
+		)
+
+		app_build_number = get_build_number(
+			xcodeproj: "FlowersStore.xcodeproj"
+		)
+
+		sonar(
+			project_version: "#{app_version} (#{app_build_number})"
+		)
+		# sonar()
+	end
+end
+
+# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
+# All available actions: https://docs.fastlane.tools/actions
+
+# fastlane reports which actions are used
+#  No personal data is recorded. Learn more at https://github.com/fastlane/enhancer
