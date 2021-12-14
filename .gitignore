@@ -113,7 +113,6 @@ xcuserdata
 
 .DS_Store
 
-
 ## Gcc Patch
 /*.gcno
 
@@ -123,5 +122,9 @@ xcuserdata
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+### SonarQube ###
+.scannerwork/
+sonar-reports/
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode,cocoapods,carthage,swiftpackagemanager
