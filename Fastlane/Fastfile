@@ -52,7 +52,8 @@ platform :ios do
 			#
 			# Using `pip install --user lizard` as the user executing fastlane will
 			# install lizard in the following directory.
-			executable: "#{ENV["HOME"]}/Library/Python/3.8/lib/python/site-packages/lizard.py"
+			executable: "#{ENV["HOME"]}/Library/Python/3.8/lib/python/site-packages/lizard.py",
+			ignore_exit_status: true
 		)
 
 		swiftlint(
