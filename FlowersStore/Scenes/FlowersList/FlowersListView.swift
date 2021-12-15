@@ -14,7 +14,7 @@ protocol FlowersListViewDelegate: AnyObject {
 final class FlowersListView: UIView {
     // MARK: - Properties
     private let flowers: [Flower]
-    private var indexPathForFavoriteItem: IndexPath?
+    private(set) var indexPathForFavoriteItem: IndexPath?
     private weak var delegate: FlowersListViewDelegate?
     
     // MARK: - UI Components
@@ -84,7 +84,7 @@ extension FlowersListView: UICollectionViewDelegate, UICollectionViewDataSource 
 
 extension FlowersListView: FlowerItemCellDelegate {
     func didTapFavoriteButton(_ cell: FlowerItemCell, flower: Flower) {
-        indexPathForFavoriteItem = collectionView.indexPath(for: cell)
+        indexPathForFavoriteItem = collectionView.indexPath(for: cell) 
         
         delegate?.flowersListView(self, didTapFavorite: flower)
     }

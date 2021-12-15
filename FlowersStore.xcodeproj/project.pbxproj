@@ -21,6 +21,7 @@
 		88BD0DD22732B77D00EB958B /* FlowerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD0DD12732B77D00EB958B /* FlowerItemCell.swift */; };
 		925B13AB275F8F8400747A10 /* ImageDownloadProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925B13AA275F8F8400747A10 /* ImageDownloadProtocol.swift */; };
 		929F728427622B0700552CAE /* ImageDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F728327622B0700552CAE /* ImageDownload.swift */; };
+		92CD9D40276A16CE005C0CCA /* FlowersListViewDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD9D3F276A16CE005C0CCA /* FlowersListViewDelegateSpy.swift */; };
 		9724775B27297CC600158DD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724775A27297CC600158DD9 /* AppDelegate.swift */; };
 		9724775D27297CC600158DD9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724775C27297CC600158DD9 /* SceneDelegate.swift */; };
 		9724776427297CCC00158DD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9724776327297CCC00158DD9 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		88BD0DD12732B77D00EB958B /* FlowerItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerItemCell.swift; sourceTree = "<group>"; };
 		925B13AA275F8F8400747A10 /* ImageDownloadProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageDownloadProtocol.swift; path = FlowersStore/Utils/Protocols/ImageDownloadProtocol.swift; sourceTree = SOURCE_ROOT; };
 		929F728327622B0700552CAE /* ImageDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownload.swift; sourceTree = "<group>"; };
+		92CD9D3F276A16CE005C0CCA /* FlowersListViewDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowersListViewDelegateSpy.swift; sourceTree = "<group>"; };
 		943D62C7FB6E913807C3C76D /* Pods-FlowersStoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowersStoreTests.debug.xcconfig"; path = "Target Support Files/Pods-FlowersStoreTests/Pods-FlowersStoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9724775727297CC600158DD9 /* FlowersStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowersStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9724775A27297CC600158DD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				9B172BA8274E6915009230AE /* Stubs */,
 				C88A2090273BF05700ECCBDE /* FlowerListViewControllerTests.swift */,
 				584939CB273BF5BA00746224 /* FlowersListViewTests.swift */,
+				92CD9D3F276A16CE005C0CCA /* FlowersListViewDelegateSpy.swift */,
 			);
 			path = FlowersList;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				583793D32758F78D00B4517D /* ManagerVerifyMethodArguments.swift in Sources */,
 				C88A2091273BF05700ECCBDE /* FlowerListViewControllerTests.swift in Sources */,
 				583793D22758F78D00B4517D /* VerifyMethodVoid.swift in Sources */,
+				92CD9D40276A16CE005C0CCA /* FlowersListViewDelegateSpy.swift in Sources */,
 				9BB27D992758F9DF002CA24E /* FlowerItemCellDelegateSpy.swift in Sources */,
 				583793D12758F78D00B4517D /* VerifyMethodArgs.swift in Sources */,
 				583793D02758F78D00B4517D /* ManagerVerifyMethodProtocol.swift in Sources */,

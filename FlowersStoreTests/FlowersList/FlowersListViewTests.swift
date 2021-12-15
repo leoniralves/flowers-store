@@ -10,14 +10,16 @@ import XCTest
 
 final class FlowersListViewTests: XCTestCase {
     // MARK: - Properties
+    private let flowersListViewDelegateSpy: FlowersListViewDelegateSpy = .init()
+    
     private lazy var sut: FlowersListView = .init(
         flowers: [
             .init(id: 1, name: "PlantDummy_1", image: "http://dummy_1.com", isFavorite: false),
             .init(id: 2, name: "PlantDummy_2", image: "http://dummy_2.com", isFavorite: false)
         ],
-        delegate: nil
+        delegate: flowersListViewDelegateSpy
     )
-    
+
     // MARK: - Computed Properties
     lazy var collectionSub: UICollectionViewStub =  {
         let layout: UICollectionViewFlowLayout = .init()
@@ -65,6 +67,20 @@ final class FlowersListViewTests: XCTestCase {
         let cell: FlowerItemCell? = givenCell() as? FlowerItemCell
         
         XCTAssertEqual(cell?.titleLabel.text, "PlantDummy_1")
+    }
+    
+    func test_didTapFavoriteButton_() throws {
+        
+        let dummyCell: FlowerItemCell = .init()
+        let dummyFlower: Flower = .make()
+        
+        sut.didTapFavoriteButton(dummyCell, flower: dummyFlower)
+        
+        flowersListViewDelegateSpy.verifyFlowersListView.wasCalledOnce()
+        
+        XCTAssertEqual(flowersListViewDelegateSpy.verifyFlowersListView.getArgument()?.flower, dummyFlower)
+        
+        XCTAssertEqual(flowersListViewDelegateSpy.verifyFlowersListView.getArgument()?.flowersListView, sut)
     }
     
     private func givenCell(dummyIndexPath: IndexPath = .init(item: 0, section: 0)) -> UICollectionViewCell? {
