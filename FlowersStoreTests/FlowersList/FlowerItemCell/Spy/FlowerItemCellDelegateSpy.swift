@@ -9,11 +9,12 @@ import XCTest
 @testable import FlowersStore
 
 final class FlowerItemCellDelegateSpy: FlowerItemCellDelegate {
-    @VerifyMethodArgs<Flower>
+    
+    @VerifyMethodArgs<(cell: FlowerItemCell, flower: Flower)>
     private(set) var verifyDidTapFavoriteButton
     
-    func didTapFavoriteButton(flower: Flower) {
-        verifyDidTapFavoriteButton.append(args: flower)
+    func didTapFavoriteButton(_ cell: FlowerItemCell, flower: Flower) {
+        verifyDidTapFavoriteButton.append(args: (cell, flower))
     }
     
 }

@@ -69,7 +69,7 @@ extension FlowerItemCellTests {
         }
         
         XCTAssertEqual(
-            flowerItemCellDelegateSpy.verifyDidTapFavoriteButton.getArgument(),
+            flowerItemCellDelegateSpy.verifyDidTapFavoriteButton.getArgument()?.flower,
             flower,
             file: file,
             line: line
