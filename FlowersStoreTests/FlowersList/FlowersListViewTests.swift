@@ -21,9 +21,10 @@ final class FlowersListViewTests: XCTestCase {
     )
 
     // MARK: - Computed Properties
-    lazy var collectionSub: UICollectionViewStub =  {
+    lazy var collectionStub: UICollectionViewStub =  {
         let layout: UICollectionViewFlowLayout = .init()
         let collectionView: UICollectionViewStub = .init(frame: .zero, collectionViewLayout: layout)
+        
         
         return collectionView
     }()
@@ -57,8 +58,8 @@ final class FlowersListViewTests: XCTestCase {
     }
     
     func test_cellForRow_onCollectionViewCell_whenRowIsInvalid_shouldReturnCollectionViewCell() {
-        collectionSub.collectionViewCellToBeReturned = UICollectionViewCell()
-        let cell: UICollectionViewCell? = sut.collectionView.dataSource?.collectionView(collectionSub, cellForItemAt: .init())
+        collectionStub.collectionViewCellToBeReturned = UICollectionViewCell()
+        let cell: UICollectionViewCell? = sut.collectionView.dataSource?.collectionView(collectionStub, cellForItemAt: .init())
         
         XCTAssertFalse(cell is FlowerItemCell)
     }
@@ -69,6 +70,7 @@ final class FlowersListViewTests: XCTestCase {
         XCTAssertEqual(cell?.titleLabel.text, "PlantDummy_1")
     }
     
+    // TODO: We need a little bit more research to better understand how to implement these tests.
     func test_didTapFavoriteButton_() throws {
         let dummyCell: FlowerItemCell = .init()
         let dummyFlower: Flower = .make()
