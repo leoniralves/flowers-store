@@ -84,7 +84,7 @@ extension FlowersListView: UICollectionViewDelegate, UICollectionViewDataSource 
 
 extension FlowersListView: FlowerItemCellDelegate {
     func didTapFavoriteButton(_ cell: FlowerItemCell, flower: Flower) {
-        indexPathForFavoriteItem = collectionView.indexPath(for: cell) 
+        indexPathForFavoriteItem = collectionView.indexPath(for: cell)
         
         delegate?.flowersListView(self, didTapFavorite: flower)
     }

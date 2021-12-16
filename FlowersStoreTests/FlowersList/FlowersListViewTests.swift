@@ -70,23 +70,29 @@ final class FlowersListViewTests: XCTestCase {
     }
     
     func test_didTapFavoriteButton_() throws {
-        
         let dummyCell: FlowerItemCell = .init()
         let dummyFlower: Flower = .make()
         
         sut.didTapFavoriteButton(dummyCell, flower: dummyFlower)
         
         flowersListViewDelegateSpy.verifyFlowersListView.wasCalledOnce()
-        
         XCTAssertEqual(flowersListViewDelegateSpy.verifyFlowersListView.getArgument()?.flower, dummyFlower)
-        
         XCTAssertEqual(flowersListViewDelegateSpy.verifyFlowersListView.getArgument()?.flowersListView, sut)
     }
     
-    private func givenCell(dummyIndexPath: IndexPath = .init(item: 0, section: 0)) -> UICollectionViewCell? {
-        let cell = sut.collectionView.dataSource?.collectionView(sut.collectionView, cellForItemAt: dummyIndexPath)
+    func test_didTapFavoriteButton_1() {
+        let cell: FlowerItemCell = givenCell() as! FlowerItemCell
+        let dummyFlower: Flower = .make()
         
-        return cell
+        sut.collectionView.reloadData()
+        
+        sut.didTapFavoriteButton(cell, flower: dummyFlower)
+        
+        XCTAssertEqual(sut.indexPathForFavoriteItem, nil)
+    }
+    
+    private func givenCell(dummyIndexPath: IndexPath = .init(item: 0, section: 0)) -> UICollectionViewCell? {
+        sut.collectionView.dataSource?.collectionView(sut.collectionView, cellForItemAt: dummyIndexPath)
     }
     
 }
