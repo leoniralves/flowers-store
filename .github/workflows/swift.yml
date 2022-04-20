@@ -8,11 +8,10 @@ on:
 
 jobs:
   build:
-  name: Danger JS
-  runs-on: macos-latest
-  steps:
-    - uses: actions/checkout@v1
-    - name: Danger
-      uses: danger/swift@2.0.1
-      env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Danger
+    uses: danger/swift@2.0.1
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
