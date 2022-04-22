@@ -1,10 +1,10 @@
 name: "Danger Swift"
 
 on:
-  push:
-    branches: [ git_actions_config ]
-  # pull_request:
-  #   branches: [ develop ]
+  # push:
+  #   branches: [ git_actions_config ]
+  pull_request:
+    branches: [ develop ]
 
 jobs:
   build:
