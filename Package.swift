@@ -17,8 +17,6 @@ let package = Package(
             dependencies: [
                 .product(
                     name: "Danger",
-                    package: "swift")],
-            path: "Sources/flowers-store",
-            sources: ["main.swift"]),
+                    package: "swift")]),
     ]
 )
