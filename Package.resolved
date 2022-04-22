@@ -1,0 +1,59 @@
+{
+  "pins" : [
+    {
+      "identity" : "files",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnSundell/Files.git",
+      "state" : {
+        "revision" : "a84615f4558151fab52ac38df697ce2442991f93",
+        "version" : "2.3.0"
+      }
+    },
+    {
+      "identity" : "marathon",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnSundell/Marathon",
+      "state" : {
+        "revision" : "35b672e05ac411fb104e462fbfd6541f995abc17",
+        "version" : "3.3.0"
+      }
+    },
+    {
+      "identity" : "releases",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnSundell/Releases.git",
+      "state" : {
+        "revision" : "ea62f33a429185b0ed21344c2355862c5bc4fcce",
+        "version" : "4.0.0"
+      }
+    },
+    {
+      "identity" : "require",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnSundell/Require.git",
+      "state" : {
+        "revision" : "7cfbd0d8a2dede0e01f6f0d8ab2c7acef1df112e",
+        "version" : "2.0.1"
+      }
+    },
+    {
+      "identity" : "shellout",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnSundell/ShellOut.git",
+      "state" : {
+        "revision" : "e1577acf2b6e90086d01a6d5e2b8efdaae033568",
+        "version" : "2.3.0"
+      }
+    },
+    {
+      "identity" : "swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/danger/swift.git",
+      "state" : {
+        "revision" : "0056d38e4f9899ba1e9b5a60735584580834bc50",
+        "version" : "4.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}
