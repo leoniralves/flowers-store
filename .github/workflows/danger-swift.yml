@@ -7,17 +7,14 @@ on:
     branches: [ develop ]
 
 jobs:
-  main:
-    name: Danger JS
+  build:
     runs-on: ubuntu-latest
-    
+    name: "Run Danger"
     steps:
-      - name: git checkout
-        uses: actions/checkout@v1
-      
+      - uses: actions/checkout@v1
       - name: Danger
-        uses: danger/swift@2.0.1
-      
-      # - name: danger env
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: danger/swift@3.3.0
+        with:
+            args: --failOnErrors --no-publish-check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
