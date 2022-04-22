@@ -1,14 +1,23 @@
 name: "Danger Swift"
-on: [push]
+
+on:
+  push:
+    branches: [ git_actions_config ]
+  pull_request:
+    branches: [ develop ]
 
 jobs:
-main:
-  name: Danger JS
-  runs-on: ubuntu-latest
-  
-  steps:
-    - uses: actions/checkout@v1
-    - name: Danger
-      uses: danger/swift@2.0.1
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  main:
+    name: Danger JS
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: git checkout
+        uses: actions/checkout@v1
+      
+      - name: Danger
+        uses: danger/swift@2.0.1
+      
+      - name: danger
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
