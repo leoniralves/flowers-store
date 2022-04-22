@@ -6,10 +6,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     name: "Run Danger"
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
+      - name: Build
+        run: swift build
+      - name: Run tests
+        run: swift test
       # - name: Danger
       #   uses: danger/swift@3.3.0
       #   with:
