@@ -11,9 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Danger
-        uses: danger/swift@3.3.0
-        with:
-            args: --failOnErrors --no-publish-check
+        run: |
+          brew install danger/tap/danger-js
+          swift build --target DangerDependencies
+          swift run danger-swift ci
+        # uses: danger/swift@3.3.0
+        # with:
+        #     args: --failOnErrors --no-publish-check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
