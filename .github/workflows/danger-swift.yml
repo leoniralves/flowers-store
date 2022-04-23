@@ -12,9 +12,9 @@ jobs:
       - uses: actions/checkout@v3
       # - name: Build
       #   run: swift build
-      
+
       - name: Run tests
-        run: xcodebuild test -scheme FlowersStore -workspace FlowersStore.xcworkspace -destination 'platform=iOS Simulator,OS=15.4,name=iPhone 12 Pro'
+        run: xcodebuild test -scheme FlowersStore -workspace FlowersStore.xcworkspace -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro'
       # - name: Danger
       #   uses: danger/swift@3.3.0
       #   with:
