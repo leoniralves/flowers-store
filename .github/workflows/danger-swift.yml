@@ -10,11 +10,11 @@ jobs:
     name: "Run Danger"
     steps:
       - uses: actions/checkout@v3
-      - name: Build
-        run: swift build
+      # - name: Build
+      #   run: swift build
       - name: Run tests
         # run: xcodebuild test -scheme FlowersStore -destination 'platform=iOS Simulator,OS=15.0,name=iPhone 12 Pro'
-        run: swift test -scheme FlowersStore
+        run: swift test -help
       # - name: Danger
       #   uses: danger/swift@3.3.0
       #   with:
