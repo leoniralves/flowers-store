@@ -13,7 +13,7 @@ jobs:
       - name: Build
         run: swift build
       - name: Run tests
-        run: swift test
+        run: xcodebuild test -scheme FlowersStore -destination 'platform=iOS Simulator,OS=15.0,name=iPhone 12 Pro'
       # - name: Danger
       #   uses: danger/swift@3.3.0
       #   with:
