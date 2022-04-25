@@ -5,18 +5,19 @@ on:
     branches: [ develop ]
 
 jobs:
-  build:
+  cocoapods:
     runs-on: macos-latest
-    name: "Run Danger"
+    name: "Update Pods"
     steps:
       - uses: actions/checkout@v3
       - name: Cocoapods
         run: |
           pod deintegrate
           pod install
-  Tests:
+  build_tests:
     runs-on: macos-latest
-    name: "Run Danger"
+    name: "Run Build & Tests"
+    needs: cocoapods
     steps:
       - uses: actions/checkout@v3
       - name: Run tests
@@ -24,6 +25,7 @@ jobs:
   Danger:
     runs-on: macos-latest
     name: "Run Danger"
+    needs: build_tests
     steps:
       - uses: actions/checkout@v3
       - name: Danger
