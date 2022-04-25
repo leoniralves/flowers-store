@@ -10,28 +10,18 @@ jobs:
     name: "Run Danger"
     steps:
       - uses: actions/checkout@v3
-      # - name: Build
-      #   run: swift build
-
       - name: Cocoapods
         run: |
           pod deintegrate
           pod install
-
+  Tests:
       - name: Run tests
         run: xcodebuild test -scheme FlowersStore -workspace FlowersStore.xcworkspace -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro'
-      
+  Danger:
       - name: Danger
         uses: danger/swift@3.3.0
         with:
             args: --failOnErrors --no-publish-check
-      
-      # - name: Danger Swift
-      #   run: |
-      #     npm install -g danger
-      #     brew install danger/tap/danger-js
-      #     swift build --target DangerDependencies
-      #     swift run danger-swift ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
