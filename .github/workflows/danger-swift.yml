@@ -20,10 +20,12 @@ jobs:
 
       - name: Run tests
         run: xcodebuild test -scheme FlowersStore -workspace FlowersStore.xcworkspace -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro'
+      
       # - name: Danger
       #   uses: danger/swift@3.3.0
       #   with:
       #       args: --failOnErrors --no-publish-check
+      
       - name: Danger Swift
         run: |
           npm install -g danger
