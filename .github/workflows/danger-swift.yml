@@ -15,9 +15,17 @@ jobs:
           pod deintegrate
           pod install
   Tests:
+    runs-on: macos-latest
+    name: "Run Danger"
+    steps:
+      - uses: actions/checkout@v3
       - name: Run tests
         run: xcodebuild test -scheme FlowersStore -workspace FlowersStore.xcworkspace -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro'
   Danger:
+    runs-on: macos-latest
+    name: "Run Danger"
+    steps:
+      - uses: actions/checkout@v3
       - name: Danger
         uses: danger/swift@3.3.0
         with:
