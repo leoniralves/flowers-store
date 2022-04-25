@@ -15,7 +15,7 @@ jobs:
           pod deintegrate
           pod install
       - name: Run tests
-        run: xcodebuild test -scheme FlowersStore -workspace FlowersStore.xcworkspace -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro'
+        run: xcodebuild test -scheme FlowersStore -workspace FlowersStore.xcworkspace -destination 'platform=iOS Simulator,OS=15.4,name=iPhone 12 Pro' -derivedDataPath Build/ -enableCodeCoverage YES -resultBundlePath Build/Test/FlowersStore.xcresult
       - name: Danger Swift
         run: |
           npm install -g danger
