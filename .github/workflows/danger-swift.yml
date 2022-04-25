@@ -15,12 +15,12 @@ jobs:
           pod deintegrate
           pod install
       - name: Run tests
-        run: xcodebuild test -scheme FlowersStore -workspace FlowersStore.xcworkspace -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro' -derivedDataPath Build/ -enableCodeCoverage YES -resultBundlePath Build/Test/FlowersStore.xcresult
+        run: xcodebuild test -scheme FlowersStore -workspace FlowersStore.xcworkspace -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro' -derivedDataPath Build/ -enableCodeCoverage YES
       - name: Danger Swift
         run: |
           npm install -g danger
           swift build --target DangerDependencies
           swift run danger-swift ci
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
+          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
