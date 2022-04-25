@@ -6,6 +6,6 @@ let danger = Danger()
 let editedFiles = danger.git.modifiedFiles + danger.git.createdFiles
 message("These files have changed: \(editedFiles.joined(separator: ", "))")
 
-Coverage.xcodeBuildCoverage(.derivedDataFolder("Build/Test/FlowersStore.xcresult"), 
+Coverage.xcodeBuildCoverage(.xcresultBundle("Build/Test/FlowersStore.xcresult"), 
                             minimumCoverage: 100, 
                             excludedTargets: ["DangerSwiftCoverageTests.xctest"])
