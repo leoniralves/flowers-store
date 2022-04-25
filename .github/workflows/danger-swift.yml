@@ -5,7 +5,7 @@ on:
     branches: [ develop ]
 
 jobs:
-  cocoapods:
+  build:
     runs-on: macos-latest
     name: "Update Pods"
     steps:
@@ -14,20 +14,8 @@ jobs:
         run: |
           pod deintegrate
           pod install
-  build_tests:
-    runs-on: macos-latest
-    name: "Run Build & Tests"
-    needs: cocoapods
-    steps:
-      # - uses: actions/checkout@v3
       - name: Run tests
         run: xcodebuild test -scheme FlowersStore -workspace FlowersStore.xcworkspace -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro'
-  Danger:
-    runs-on: macos-latest
-    name: "Run Danger"
-    needs: build_tests
-    steps:
-      # - uses: actions/checkout@v3
       - name: Danger
         uses: danger/swift@3.3.0
         with:
