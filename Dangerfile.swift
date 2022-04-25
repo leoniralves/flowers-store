@@ -8,4 +8,4 @@ message("These files have changed: \(editedFiles.joined(separator: ", "))")
 
 Coverage.xcodeBuildCoverage(.xcresultBundle("Build/Test/FlowersStore.xcresult"), 
                             minimumCoverage: 100, 
-                            excludedTargets: ["DangerSwiftCoverageTests.xctest"])
+                            excludedTargets: ["FlowersStoreTests.xctest"])
