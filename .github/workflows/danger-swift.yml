@@ -19,7 +19,7 @@ jobs:
     name: "Run Build & Tests"
     needs: cocoapods
     steps:
-      - uses: actions/checkout@v3
+      # - uses: actions/checkout@v3
       - name: Run tests
         run: xcodebuild test -scheme FlowersStore -workspace FlowersStore.xcworkspace -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro'
   Danger:
@@ -27,7 +27,7 @@ jobs:
     name: "Run Danger"
     needs: build_tests
     steps:
-      - uses: actions/checkout@v3
+      # - uses: actions/checkout@v3
       - name: Danger
         uses: danger/swift@3.3.0
         with:
