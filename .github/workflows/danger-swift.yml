@@ -19,7 +19,7 @@ jobs:
       - name: Danger Swift
         run: |
           npm install -g danger
-          swift build
+          swift build --target DangerDependencies
           swift run danger-swift ci
         env:
           # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
