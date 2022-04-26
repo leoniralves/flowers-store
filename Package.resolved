@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "DangerXCodeSummary",
+        "repositoryURL": "https://github.com/f-meloni/danger-swift-xcodesummary",
+        "state": {
+          "branch": null,
+          "revision": "289d5136cead3d4b1eae509acc3f0b044252fc6c",
+          "version": "1.2.1"
+        }
+      },
+      {
         "package": "Logger",
         "repositoryURL": "https://github.com/shibapm/Logger",
         "state": {
