@@ -67,7 +67,7 @@ final class FlowersListViewTests: XCTestCase {
     func test_cellForRow_onCollectionViewCell_titleLabelContainsExpectedContent() {
         let cell: FlowerItemCell? = givenCell() as? FlowerItemCell
         
-        XCTAssertEqual(cell?.titleLabel.text, "PlantDummy_1")
+        XCTAssertEqual(cell?.titleLabel.text, "PlantDummy_2")
     }
     
     // TODO: We need a little bit more research to better understand how to implement these tests.
