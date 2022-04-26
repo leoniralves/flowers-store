@@ -16,8 +16,6 @@ Coverage.xcodeBuildCoverage(.derivedDataFolder("Build"),
                             excludedTargets: ["FlowersStoreTests.xctest"])
 
 DangerPeriphery.scan(arguments: [
-    "--workspace FlowersStore.xcworkspace",
-    "--schemes FlowersStore",
     "--index-store-path Build/Index/DataStore",
     "--skip-build"
 ])
