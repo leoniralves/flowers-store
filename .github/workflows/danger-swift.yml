@@ -14,13 +14,15 @@ jobs:
         run: |
           pod deintegrate
           pod install
+      - name: Install xcpretty and xcpretty-json-formatter
+        run: |
+          gem install xcpretty
+          gem install xcpretty-json-formatter
       - name: Run tests
         run: xcodebuild test -scheme FlowersStore -workspace FlowersStore.xcworkspace -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro' -derivedDataPath Build/ -enableCodeCoverage YES | XCPRETTY_JSON_FILE_OUTPUT=result.json xcpretty -f `xcpretty-json-formatter`
       - name: Danger Swift
         run: |
           npm install -g danger
-          gem install xcpretty
-          gem install xcpretty-json-formatter
           swift build --target DangerDependencies
           swift run danger-swift ci
         env:
