@@ -1,6 +1,7 @@
 import Danger 
 import DangerSwiftCoverage
 import DangerXCodeSummary
+import DangerSwiftPeriphery
 
 let danger = Danger()
 
@@ -13,3 +14,10 @@ summary.report()
 Coverage.xcodeBuildCoverage(.derivedDataFolder("Build"), 
                             minimumCoverage: 90, 
                             excludedTargets: ["FlowersStoreTests.xctest"])
+
+DangerPeriphery.scan(arguments: [
+    "--workspace FlowersStore.xcworkspace",
+    "--schemes FlowersStore",
+    "--index-store-path Build/Index/DataStore",
+    "--skip-build"
+])
