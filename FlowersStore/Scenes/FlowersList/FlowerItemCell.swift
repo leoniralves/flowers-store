@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+protocol Teste {}
+
 protocol FlowerItemCellDelegate: AnyObject {
     func didTapFavoriteButton(_ cell: FlowerItemCell, flower: Flower)
 }
@@ -17,6 +19,8 @@ final class FlowerItemCell: UICollectionViewCell {
     private weak var delegate: FlowerItemCellDelegate?
     private var flower: Flower?
     private var imageDownloadProtocol: ImageDownloadProtocol?
+
+    var teste: String?
     
     // MARK: - UI Components
     private(set) lazy var imageView: UIImageView = {
