@@ -1,0 +1,6 @@
+schemes:
+- FlowersStore
+targets:
+- FlowersStore
+- FlowersStoreTests
+workspace: FlowersStore.xcworkspace
