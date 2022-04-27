@@ -21,8 +21,8 @@ jobs:
       #     gem install xcpretty
       #     gem install xcpretty-json-formatter
      
-      # - name: Run tests
-      #   run: xcodebuild test -scheme FlowersStore -workspace FlowersStore.xcworkspace -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro' -derivedDataPath Build/ -enableCodeCoverage YES | XCPRETTY_JSON_FILE_OUTPUT=result.json xcpretty -f `xcpretty-json-formatter`
+      - name: Run tests
+        run: xcodebuild test -scheme FlowersStore -workspace FlowersStore.xcworkspace -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro' -derivedDataPath Build/ -enableCodeCoverage YES | XCPRETTY_JSON_FILE_OUTPUT=result.json xcpretty -f `xcpretty-json-formatter`
       
       # - name: Install Danger
       #   run: |
