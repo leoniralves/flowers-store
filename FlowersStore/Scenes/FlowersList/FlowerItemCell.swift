@@ -8,8 +8,6 @@
 import Foundation
 import UIKit
 
-protocol Teste {}
-
 protocol FlowerItemCellDelegate: AnyObject {
     func didTapFavoriteButton(_ cell: FlowerItemCell, flower: Flower)
 }
