@@ -1,9 +1,0 @@
-schemes:
-- FlowersStore
-targets:
-- FlowersStore
-- FlowersStoreTests
-workspace: FlowersStore.xcworkspace
-index_store_path: Build/Index/DataStore
-skip_build: true
-quiet: false

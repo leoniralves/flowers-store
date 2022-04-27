@@ -1,4 +1,4 @@
-// import Danger 
+import Danger 
 // import DangerSwiftCoverage
 // import DangerXCodeSummary
 import DangerSwiftPeriphery
@@ -15,4 +15,11 @@ import DangerSwiftPeriphery
 //                             minimumCoverage: 90, 
 //                             excludedTargets: ["FlowersStoreTests.xctest"])
 
-DangerPeriphery.scan()
+DangerPeriphery.scan(arguments: [
+    "--workspace FlowersStore.xcworkspace",
+    "--schemes FlowersStore",
+    "--targets [FlowersStore, FlowersStoreTests]",
+    "--quiet false",
+    "--index-store-path Build/Index/DataStore",
+    "--skip-build"
+])
