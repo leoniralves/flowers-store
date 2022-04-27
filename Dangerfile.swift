@@ -5,6 +5,8 @@ import DangerSwiftPeriphery
 
 let danger = Danger()
 
+DangerPeriphery.scan()
+
 let editedFiles = danger.git.modifiedFiles + danger.git.createdFiles
 message("These files have changed: \(editedFiles.joined(separator: ", "))")
 
@@ -14,13 +16,3 @@ summary.report()
 Coverage.xcodeBuildCoverage(.derivedDataFolder("Build"), 
                             minimumCoverage: 90, 
                             excludedTargets: ["FlowersStoreTests.xctest"])
-
-// DangerPeriphery.scan(arguments: [
-//     "--workspace FlowersStore.xcworkspace",
-//     "--schemes FlowersStore",
-//     "--targets FlowersStore,FlowersStoreTests",
-//     "--index-store-path Build/Index/DataStore",
-//     "--skip-build"
-// ])
-
-DangerPeriphery.scan()
