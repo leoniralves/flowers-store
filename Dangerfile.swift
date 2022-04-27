@@ -17,7 +17,9 @@ import DangerSwiftPeriphery
 
 DangerPeriphery.scan(arguments: [
     "--workspace FlowersStore.xcworkspace",
-    "--schemes FlowersStore"
+    "--schemes FlowersStore",
+    "--targets FlowersStore,FlowersStoreTests",
+    "--verbose"
 ])
 
 // DangerPeriphery.scan()
