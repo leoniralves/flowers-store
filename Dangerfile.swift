@@ -3,7 +3,7 @@ import Danger
 // import DangerXCodeSummary
 import DangerSwiftPeriphery
 
-// let danger = Danger()
+let danger = Danger()
 
 // let editedFiles = danger.git.modifiedFiles + danger.git.createdFiles
 // message("These files have changed: \(editedFiles.joined(separator: ", "))")
@@ -15,9 +15,11 @@ import DangerSwiftPeriphery
 //                             minimumCoverage: 90, 
 //                             excludedTargets: ["FlowersStoreTests.xctest"])
 
-DangerPeriphery.scan(arguments: [
-    "--workspace FlowersStore.xcworkspace",
-    "--schemes FlowersStore",
-    "--index-store-path Build/Index/DataStore",
-    "--skip-build"
-])
+// DangerPeriphery.scan(arguments: [
+//     "--workspace FlowersStore.xcworkspace",
+//     "--schemes FlowersStore",
+//     "--index-store-path Build/Index/DataStore",
+//     "--skip-build"
+// ])
+
+DangerPeriphery.scan()
