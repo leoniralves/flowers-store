@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/danger/swift.git",
-            from: "3.0.0"),
+            from: "3.11.1"),
         .package(
             url: "https://github.com/f-meloni/danger-swift-coverage.git",
             from: "1.2.1"),
