@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol MyProtocol { // 'MyProtocol' is redundant
+protocol Mano { // 'MyProtocol' is redundant
     func someMethod()
 }

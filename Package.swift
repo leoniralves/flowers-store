@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/danger/swift.git",
-            from: "3.11.1"),
+            from: "3.0.0"),
         .package(
             url: "https://github.com/f-meloni/danger-swift-coverage.git",
             from: "1.2.1"),
@@ -22,8 +22,9 @@ let package = Package(
             url: "https://github.com/f-meloni/danger-swift-xcodesummary",
             from: "1.2.1"),
         .package(
+            name: "DangerSwiftPeriphery",
             url: "https://github.com/taji-taji/DangerSwiftPeriphery.git",
-            from: "1.0.0")
+            branch: "main"),
     ],
     targets: [
         .target(

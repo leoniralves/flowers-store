@@ -23,9 +23,9 @@
         "package": "DangerSwiftPeriphery",
         "repositoryURL": "https://github.com/taji-taji/DangerSwiftPeriphery.git",
         "state": {
-          "branch": null,
+          "branch": "main",
           "revision": "60a45bf4a91e3f275d6ae817f267d7c94d051c68",
-          "version": "1.0.0"
+          "version": null
         }
       },
       {
