@@ -22,7 +22,7 @@ jobs:
       #     gem install xcpretty-json-formatter
      
       # - name: Run tests
-      #   # run: xcodebuild test -scheme FlowersStore -workspace FlowersStore.xcworkspace -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro' -derivedDataPath Build/ -enableCodeCoverage YES | XCPRETTY_JSON_FILE_OUTPUT=result.json xcpretty -f `xcpretty-json-formatter`
+      #   run: xcodebuild test -scheme FlowersStore -workspace FlowersStore.xcworkspace -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro' -derivedDataPath Build/ -enableCodeCoverage YES | XCPRETTY_JSON_FILE_OUTPUT=result.json xcpretty -f `xcpretty-json-formatter`
       
       - name: Install Danger
         run: |
@@ -32,6 +32,6 @@ jobs:
         run: |
           swift build --target DangerDependencies
           swift run danger-swift ci
-        env:git 
+        env: 
           # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
