@@ -5,10 +5,8 @@ import DangerSwiftPeriphery
 
 let danger = Danger()
 
-print("### danger.github", danger.github)
 message("danger.github: \(danger.github)")
-print("### danger.github.pullRequest.base.ref", "origin/\(github.pullRequest.base.ref)..HEAD"
-message("danger.github.pullRequest.base.ref: origin/\(github.pullRequest.base.ref)..HEAD")
+message("danger.github.pullRequest.base.ref: origin/\(danger.github.pullRequest.base.ref)..HEAD")
 
 // DangerPeriphery.scan()
 
