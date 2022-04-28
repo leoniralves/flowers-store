@@ -5,8 +5,7 @@ import DangerSwiftPeriphery
 
 let danger = Danger()
 
-message("danger.github: \(danger.github)")
-message("danger.github.pullRequest.base.ref: origin/\(danger.github.pullRequest.base.ref)..HEAD")
+message("Teste Message")
 
 // DangerPeriphery.scan()
 
