@@ -32,7 +32,7 @@ jobs:
         # run: npm install -g danger
         run: brew install danger/tap/danger-swift
 
-      # - name: Install Periphery
+      - name: Install Periphery
         run: brew install peripheryapp/periphery/periphery
       
       - name: Run Danger-Swift
