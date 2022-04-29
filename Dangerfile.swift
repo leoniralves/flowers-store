@@ -5,7 +5,7 @@ import DangerSwiftPeriphery
 
 let danger = Danger()
 
-message("Teste Message 6")
+message("Teste Message 7")
 
 DangerPeriphery.scan()
 
