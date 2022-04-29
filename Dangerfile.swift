@@ -5,9 +5,9 @@ import DangerSwiftPeriphery
 
 let danger = Danger()
 
-message("Teste Message")
+message("Teste Message 3")
 
-// DangerPeriphery.scan()
+DangerPeriphery.scan()
 
 // let editedFiles = danger.git.modifiedFiles + danger.git.createdFiles
 // message("These files have changed: \(editedFiles.joined(separator: ", "))")

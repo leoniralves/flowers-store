@@ -20,7 +20,7 @@
 		584939CC273BF5BA00746224 /* FlowersListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584939CB273BF5BA00746224 /* FlowersListViewTests.swift */; };
 		584B47F22760D9B000054511 /* ImageDownloadProtocolSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584B47F12760D9B000054511 /* ImageDownloadProtocolSpy.swift */; };
 		88BD0DD22732B77D00EB958B /* FlowerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD0DD12732B77D00EB958B /* FlowerItemCell.swift */; };
-		8FFB34E02819FE690070D9BB /* TestePeriphery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFB34DF2819FE690070D9BB /* TestePeriphery.swift */; };
+		8F048E1C281C09CE003F8515 /* TestePeriphery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFB34DF2819FE690070D9BB /* TestePeriphery.swift */; };
 		925B13AB275F8F8400747A10 /* ImageDownloadProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925B13AA275F8F8400747A10 /* ImageDownloadProtocol.swift */; };
 		929F728427622B0700552CAE /* ImageDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929F728327622B0700552CAE /* ImageDownload.swift */; };
 		92CD9D40276A16CE005C0CCA /* FlowersListViewDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD9D3F276A16CE005C0CCA /* FlowersListViewDelegateSpy.swift */; };
@@ -490,7 +490,7 @@
 				9724775B27297CC600158DD9 /* AppDelegate.swift in Sources */,
 				9724775D27297CC600158DD9 /* SceneDelegate.swift in Sources */,
 				925B13AB275F8F8400747A10 /* ImageDownloadProtocol.swift in Sources */,
-				8FFB34E02819FE690070D9BB /* TestePeriphery.swift in Sources */,
+				8F048E1C281C09CE003F8515 /* TestePeriphery.swift in Sources */,
 				88BD0DD22732B77D00EB958B /* FlowerItemCell.swift in Sources */,
 				068901E0273A9E4400CE4F32 /* FlowersListCollectionViewFlowLayout.swift in Sources */,
 			);
