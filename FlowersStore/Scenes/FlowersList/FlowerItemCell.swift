@@ -17,7 +17,7 @@ final class FlowerItemCell: UICollectionViewCell {
     private weak var delegate: FlowerItemCellDelegate?
     private var flower: Flower?
     private var imageDownloadProtocol: ImageDownloadProtocol?
-    
+
     // MARK: - UI Components
     private(set) lazy var imageView: UIImageView = {
         let imageView: UIImageView = .init()
