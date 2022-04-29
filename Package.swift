@@ -21,14 +21,10 @@ let package = Package(
         .package(
             url: "https://github.com/f-meloni/danger-swift-xcodesummary",
             from: "1.2.1"),
-        // .package(
-        //     name: "DangerSwiftPeriphery",
-        //     url: "https://github.com/taji-taji/DangerSwiftPeriphery.git",
-        //     branch: "main"),
         .package(
             name: "DangerSwiftPeriphery",
             url: "https://github.com/leoniralves/DangerSwiftPeriphery.git",
-            branch: "issue-01"),
+            .branch("issue-01")),
     ],
     targets: [
         .target(
