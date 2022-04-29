@@ -14,6 +14,8 @@ jobs:
     name: "Danger"
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Diff
         run: git diff origin/develop..HEAD -- FlowersStoreTests/TestHelpers/VerifyMethodWrapper/VerifyMethodVoid.swift
