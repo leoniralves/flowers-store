@@ -15,10 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      # - name: Cocoapods
-      #   run: |
-      #     pod deintegrate
-      #     pod install
+      - name: Cocoapods
+        run: |
+          pod deintegrate
+          pod install
       
       # - name: Install xcpretty and xcpretty-json-formatter
       #   run: |
