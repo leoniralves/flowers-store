@@ -52,39 +52,13 @@ struct Validator {
         let swiftCreatedFiles = sourceChanges.filter { $0.hasSuffix(".swift") }
         let swiftCreatedFilesTests = sourceTestChanges.filter { $0.hasSuffix("Tests.swift") || $0.hasSuffix("Test.swift") }
         
-        // for swiftCreatedFilesTest in swiftCreatedFilesTests {
-        //     // Check if the file doesn't require test
-        //     let isRequiredTest = !danger.utils.readFile(viewModel).contains("// danger:notest")
-        //     guard isRequiredTest else {
-        //         return
-        //     }
-
-        //     let baseViewModelFileName = ((viewModel as NSString).lastPathComponent as NSString).deletingPathExtension
-        //     let foundTest = viewModelTests.filter { (($0 as NSString).lastPathComponent as NSString).deletingPathExtension.hasPrefix(baseViewModelFileName) }
-        //     guard foundTest.count == 0 else {
-        //         return
-        //     }
-        //     warn("You have created `\(viewModel)` but there is no test `\(baseViewModelFileName)Tests.swift` found.")
-        // }
-
-        // for i in createdFiles.filter { !$0.hasPrefix("Tests.swift") } {
-        //     let file = ((i as NSString).lastPathComponent as NSString)
-        //     print(file)
-            
-            
-        // }
-
-        print(swiftCreatedFilesTests)
-
         let files = swiftCreatedFiles.filter { !$0.hasPrefix("Tests.swift") }
 
         for filePath in files {
             let file = ((filePath as NSString).lastPathComponent as NSString)
             
             if !swiftCreatedFilesTests.contains { $0.hasSuffix("\(file.deletingPathExtension)Tests.swift") } {
-                print("\(file) has no test")
-            } else {
-                print("\(file) has test ###")
+                warn("You have created `\(file)` but there is no test `\(file.deletingPathExtension)Tests.swift` found.")
             }
         }
         
