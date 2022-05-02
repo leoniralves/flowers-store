@@ -1,0 +1,45 @@
+name: "Danger Swift - Teste"
+
+on:
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    env:
+          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
+          HOMEBREW_NO_AUTO_UPDATE: 1
+    name: "Danger"
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Cocoapods
+        run: |
+          pod deintegrate
+          pod install
+      
+      - name: Install xcpretty and xcpretty-json-formatter
+        run: |
+          gem install xcpretty
+          gem install xcpretty-json-formatter
+     
+      - name: Run tests
+        run: xcodebuild clean build-for-testing -scheme FlowersStore -workspace FlowersStore.xcworkspace -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 12 Pro' -derivedDataPath Build/ -enableCodeCoverage YES | XCPRETTY_JSON_FILE_OUTPUT=result.json xcpretty -f `xcpretty-json-formatter`
+      
+      - name: Install Danger
+        run: |
+          npm install -g danger
+
+      - name: Install Periphery
+        run: brew install peripheryapp/periphery/periphery
+      
+      - name: Run Danger-Swift
+        run: |
+          swift package update
+          swift build --target DangerDependencies
+          swift run danger-swift ci
+          
