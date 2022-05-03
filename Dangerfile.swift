@@ -16,7 +16,6 @@ struct Validator {
         runPeriphery()
         runXCodeSummary()
         runXCodeBuildCoverage()
-        runTestsUpdatedValidate()
         checkHavingTestsToCreatedFiles()
         checkHavingTestsToModifiedFiles()
     }
