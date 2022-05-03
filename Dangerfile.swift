@@ -17,7 +17,8 @@ struct Validator {
         // runXCodeSummary()
         // runXCodeBuildCoverage()
         // runTestsUpdatedValidate()
-        checkHavingTests()
+        checkHavingTestsToCreatedFiles()
+        checkHavingTestsToModifiedFiles()
     }
 
     private func runPeriphery() {
@@ -37,31 +38,35 @@ struct Validator {
         )
     }
 
-    // private runTestsUpdatedValidate() {
-    //     // Warn when library files has been updated but not tests.
-    //     let testsUpdated = danger.git.modifiedFiles.contains { $0.hasPrefix("Tests") || $0.hasPrefix("Test") }
-    //     if allSourceFiles && !testsUpdated {
-    //         warn("The library files were changed, but the tests remained unmodified. Consider updating or adding to the tests to match the library changes.")
-    //     }
-    // }
-
-    private func checkHavingTests() {
+    private func checkHavingTestsToCreatedFiles() {
         let createdFiles = danger.git.createdFiles
         let sourceChanges = createdFiles.filter { $0.hasPrefix("FlowersStore/") }
-        let sourceTestChanges = createdFiles.filter { $0.hasPrefix("FlowersStoreTests/") }
         let swiftCreatedFiles = sourceChanges.filter { $0.hasSuffix(".swift") }
-        let swiftCreatedFilesTests = sourceTestChanges.filter { $0.hasSuffix("Tests.swift") || $0.hasSuffix("Test.swift") }
         
-        let files = swiftCreatedFiles.filter { !$0.hasPrefix("Tests.swift") }
-
+        let files = swiftCreatedFiles.filter { !$0.hasPrefix("Tests.swift") && !$0.hasPrefix("Test.swift") }
         for filePath in files {
             let file = ((filePath as NSString).lastPathComponent as NSString)
             
-            if !swiftCreatedFilesTests.contains { $0.hasSuffix("\(file.deletingPathExtension)Tests.swift") } {
+            if !createdFiles.contains(where: { $0.hasSuffix("\(file.deletingPathExtension)Tests.swift") || $0.hasSuffix("\(file.deletingPathExtension)Test.swift") }) {
                 warn("You have created `\(file)` but there is no test `\(file.deletingPathExtension)Tests.swift` found.")
             }
         }
+    }
+
+    private func checkHavingTestsToModifiedFiles() {
+        let modifiedFiles = danger.git.modifiedFiles
+        let sourceChanges = modifiedFiles.filter { $0.hasPrefix("FlowersStore/") }
+        let swiftCreatedFiles = sourceChanges.filter { $0.hasSuffix(".swift") }
+        let sourceTestChanges = modifiedFiles.filter { $0.hasPrefix("FlowersStoreTests/") }
+        let swiftCreatedFilesTests = sourceTestChanges.filter { $0.hasSuffix("Tests.swift") || $0.hasSuffix("Test.swift") }
         
-        
+        let files = swiftCreatedFiles.filter { !$0.hasPrefix("Tests.swift") }
+        for filePath in files {
+            let file = ((filePath as NSString).lastPathComponent as NSString)
+            
+            if !swiftCreatedFilesTests.contains(where: { $0.hasSuffix("\(file.deletingPathExtension)Tests.swift") }) {
+                warn("The \(file) file was changed, but the tests remained unmodified. Consider updating or adding the tests to match the PR changes.")
+            }
+        }
     }
 }
