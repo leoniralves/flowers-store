@@ -26,6 +26,6 @@
   "tests_failures": {
 },
   "tests_summary_messages": [
-
+    "\t Executed 17 tests, with 0 failures (0 unexpected) in 0.332 (0.355) seconds\n"
   ]
 }

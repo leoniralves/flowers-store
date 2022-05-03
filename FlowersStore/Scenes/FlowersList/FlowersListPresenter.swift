@@ -20,12 +20,18 @@ final class FlowersListPresenter {
     private weak var output: FlowersListPresenterOutput?
     private let interactor: FlowersListInteractorInput
     
+    private var teste: String?
+    
     init(interactor: FlowersListInteractorInput = FlowersListInteractor()) {
         self.interactor = interactor
     }
     
     func setOutput(_ output: FlowersListPresenterOutput?) {
         self.output = output
+    }
+    
+    func setName() {
+        
     }
 }
 
