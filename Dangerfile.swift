@@ -15,9 +15,9 @@ struct Validator {
     func validate() {
         runPeriphery()
         runXCodeSummary()
-        runXCodeBuildCoverage()
-        checkHavingTestsToCreatedFiles()
-        checkHavingTestsToModifiedFiles()
+        // runXCodeBuildCoverage()
+        // checkHavingTestsToCreatedFiles()
+        // checkHavingTestsToModifiedFiles()
     }
 
     private func runPeriphery() {
