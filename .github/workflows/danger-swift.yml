@@ -1,8 +1,7 @@
-name: "Danger Swift - Teste"
+name: "Danger Swift"
 
 on:
   pull_request:
-    branches: [ develop ]
 
 jobs:
   build:
