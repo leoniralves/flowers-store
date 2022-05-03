@@ -30,6 +30,10 @@ final class FlowersListPresenter {
 }
 
 extension FlowersListPresenter: FlowersListPresenterInput {
+    func koe() {
+        
+    }
+    
     func didTapFavoriteButton() {
         
     }
