@@ -37,6 +37,7 @@ jobs:
       
       - name: Run Danger-Swift
         run: |
+          swift package update
           swift build --target DangerDependencies
           swift run danger-swift ci
           
