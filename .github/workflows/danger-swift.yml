@@ -42,3 +42,4 @@ jobs:
           swift package update
           swift build --target DangerDependencies
           swift run danger-swift ci
+          
