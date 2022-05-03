@@ -31,7 +31,7 @@ final class FlowersListPresenter {
 
 extension FlowersListPresenter: FlowersListPresenterInput {
     func didTapFavoriteButton() {
-        print("Koe")
+        
     }
     
     func getFlower() -> Flower {
