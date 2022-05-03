@@ -13,10 +13,10 @@ validator.validate()
 struct Validator {
 
     func validate() {
-        // runPeriphery()
-        // runXCodeSummary()
-        // runXCodeBuildCoverage()
-        // runTestsUpdatedValidate()
+        runPeriphery()
+        runXCodeSummary()
+        runXCodeBuildCoverage()
+        runTestsUpdatedValidate()
         checkHavingTestsToCreatedFiles()
         checkHavingTestsToModifiedFiles()
     }
@@ -65,7 +65,7 @@ struct Validator {
             let file = ((filePath as NSString).lastPathComponent as NSString)
             
             if !swiftCreatedFilesTests.contains(where: { $0.hasSuffix("\(file.deletingPathExtension)Tests.swift") }) {
-                warn("The \(file) file was changed, but the tests remained unmodified. Consider updating or adding the tests to match the PR changes.")
+                warn("The `\(file)` file was changed, but the tests remained unmodified. Consider updating or adding the tests to match the PR changes.")
             }
         }
     }
