@@ -1,0 +1,3 @@
+import DangerSwiftPeriphery
+
+DangerPeriphery.scan()

@@ -6,8 +6,8 @@ target 'FlowersStore' do
   use_frameworks!
 
   # Pods for FlowersStore
-  pod 'Firebase/RemoteConfig'
-  pod 'Firebase/Analytics'
+  # pod 'Firebase/RemoteConfig'
+  # pod 'Firebase/Analytics'
 
   target 'FlowersStoreTests' do
     inherit! :search_paths
