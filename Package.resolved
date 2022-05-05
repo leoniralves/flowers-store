@@ -21,11 +21,11 @@
       },
       {
         "package": "DangerSwiftPeriphery",
-        "repositoryURL": "https://github.com/taji-taji/DangerSwiftPeriphery.git",
+        "repositoryURL": "https://github.com/leoniralves/DangerSwiftPeriphery.git",
         "state": {
-          "branch": null,
-          "revision": "60a45bf4a91e3f275d6ae817f267d7c94d051c68",
-          "version": "1.0.0"
+          "branch": "issue-01",
+          "revision": "223dcee95ad51961d2d4ae942208867ad4e58330",
+          "version": null
         }
       },
       {

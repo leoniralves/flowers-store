@@ -18,6 +18,7 @@ struct Validator {
         runXCodeBuildCoverage()
         checkHavingTestsToCreatedFiles()
         checkHavingTestsToModifiedFiles()
+        checkUpdateChangelog()
     }
 
     private func runPeriphery() {
@@ -66,6 +67,19 @@ struct Validator {
             if !swiftCreatedFilesTests.contains(where: { $0.hasSuffix("\(file.deletingPathExtension)Tests.swift") }) {
                 warn("The `\(file)` file was changed, but the tests remained unmodified. Consider updating or adding the tests to match the PR changes.")
             }
+        }
+    }
+
+    // Changelog entries are required for changes to library files when PR to `develop`.
+    private func checkUpdateChangelog() {
+        let noChangelogEntry = !allSourceFiles.contains("CHANGELOG.md")
+        let isDevelopBranch = (danger.github.pullRequest.base.ref == "develop")
+
+        if isDevelopBranch && noChangelogEntry{
+            danger.fail("""
+                Any changes to the module code must be reflected in the [**Changelog**](CHANGELOG.md) before merging into the `develop` branch. \n
+                Please consider adding a note there :wink:.
+                """)
         }
     }
 }
