@@ -38,6 +38,12 @@
 		C88A1FE6272AD1B600ECCBDE /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88A1FE5272AD1B600ECCBDE /* ViewCode.swift */; };
 		C88A1FE8272AD2EA00ECCBDE /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88A1FE7272AD2EA00ECCBDE /* UIView+Constraints.swift */; };
 		C88A2091273BF05700ECCBDE /* FlowerListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88A2090273BF05700ECCBDE /* FlowerListViewControllerTests.swift */; };
+		C8AE8B312B04795900E10CD3 /* VanGraaffCanvaControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AE8B2D2B04795900E10CD3 /* VanGraaffCanvaControllerBuilder.swift */; };
+		C8AE8B322B04795900E10CD3 /* VanGraaffCanvaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AE8B2E2B04795900E10CD3 /* VanGraaffCanvaPresenter.swift */; };
+		C8AE8B332B04795900E10CD3 /* VanGraaffCanvaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AE8B2F2B04795900E10CD3 /* VanGraaffCanvaController.swift */; };
+		C8AE8B342B04795900E10CD3 /* VanGraaffCanvaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AE8B302B04795900E10CD3 /* VanGraaffCanvaInteractor.swift */; };
+		C8AE8B362B047C8E00E10CD3 /* VanGraaffCanvaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AE8B352B047C8E00E10CD3 /* VanGraaffCanvaView.swift */; };
+		C8AE8B392B0486EA00E10CD3 /* Magazine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AE8B382B0486EA00E10CD3 /* Magazine.swift */; };
 		C8E24D1B274D158E008B5F6E /* UICollectionViewStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E24D1A274D158E008B5F6E /* UICollectionViewStub.swift */; };
 		C8E24D202758F385008B5F6E /* FlowerItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E24D1F2758F385008B5F6E /* FlowerItemCellTests.swift */; };
 		CE6B96B141FDD603C494FA1E /* Pods_FlowersStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBD54BD2B88087787B41122 /* Pods_FlowersStore.framework */; };
@@ -91,6 +97,12 @@
 		C88A1FE5272AD1B600ECCBDE /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		C88A1FE7272AD2EA00ECCBDE /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		C88A2090273BF05700ECCBDE /* FlowerListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerListViewControllerTests.swift; sourceTree = "<group>"; };
+		C8AE8B2D2B04795900E10CD3 /* VanGraaffCanvaControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanGraaffCanvaControllerBuilder.swift; sourceTree = "<group>"; };
+		C8AE8B2E2B04795900E10CD3 /* VanGraaffCanvaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanGraaffCanvaPresenter.swift; sourceTree = "<group>"; };
+		C8AE8B2F2B04795900E10CD3 /* VanGraaffCanvaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanGraaffCanvaController.swift; sourceTree = "<group>"; };
+		C8AE8B302B04795900E10CD3 /* VanGraaffCanvaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanGraaffCanvaInteractor.swift; sourceTree = "<group>"; };
+		C8AE8B352B047C8E00E10CD3 /* VanGraaffCanvaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanGraaffCanvaView.swift; sourceTree = "<group>"; };
+		C8AE8B382B0486EA00E10CD3 /* Magazine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magazine.swift; sourceTree = "<group>"; };
 		C8E24D1A274D158E008B5F6E /* UICollectionViewStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewStub.swift; sourceTree = "<group>"; };
 		C8E24D1F2758F385008B5F6E /* FlowerItemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerItemCellTests.swift; sourceTree = "<group>"; };
 		CFD78FEF3D61F88B30FDDA74 /* Pods-FlowersStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowersStore.release.xcconfig"; path = "Target Support Files/Pods-FlowersStore/Pods-FlowersStore.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +215,7 @@
 		9B06DF75272ACD4F00DA2F83 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C8AE8B2C2B0478CF00E10CD3 /* VanGraaffCanva */,
 				9B06DF76272ACD5700DA2F83 /* FlowersList */,
 			);
 			path = Scenes;
@@ -293,6 +306,27 @@
 				92CD9D3F276A16CE005C0CCA /* FlowersListViewDelegateSpy.swift */,
 			);
 			path = FlowersList;
+			sourceTree = "<group>";
+		};
+		C8AE8B2C2B0478CF00E10CD3 /* VanGraaffCanva */ = {
+			isa = PBXGroup;
+			children = (
+				C8AE8B372B0486CF00E10CD3 /* Helpers */,
+				C8AE8B2D2B04795900E10CD3 /* VanGraaffCanvaControllerBuilder.swift */,
+				C8AE8B2E2B04795900E10CD3 /* VanGraaffCanvaPresenter.swift */,
+				C8AE8B2F2B04795900E10CD3 /* VanGraaffCanvaController.swift */,
+				C8AE8B302B04795900E10CD3 /* VanGraaffCanvaInteractor.swift */,
+				C8AE8B352B047C8E00E10CD3 /* VanGraaffCanvaView.swift */,
+			);
+			path = VanGraaffCanva;
+			sourceTree = "<group>";
+		};
+		C8AE8B372B0486CF00E10CD3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C8AE8B382B0486EA00E10CD3 /* Magazine.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		C8E24D18274D14C9008B5F6E /* Mocks */ = {
@@ -494,15 +528,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				06C3F59C27564DC1005DAC19 /* FlowersListPresenter.swift in Sources */,
+				C8AE8B392B0486EA00E10CD3 /* Magazine.swift in Sources */,
+				C8AE8B312B04795900E10CD3 /* VanGraaffCanvaControllerBuilder.swift in Sources */,
+				C8AE8B362B047C8E00E10CD3 /* VanGraaffCanvaView.swift in Sources */,
 				9B06DF74272ACC0B00DA2F83 /* FlowersListViewController.swift in Sources */,
+				C8AE8B332B04795900E10CD3 /* VanGraaffCanvaController.swift in Sources */,
 				C88A1FE6272AD1B600ECCBDE /* ViewCode.swift in Sources */,
 				929F728427622B0700552CAE /* ImageDownload.swift in Sources */,
+				C8AE8B322B04795900E10CD3 /* VanGraaffCanvaPresenter.swift in Sources */,
 				5838A731275650A000253254 /* FlowersListInteractor.swift in Sources */,
 				9B172BA6274E66F0009230AE /* Flower.swift in Sources */,
 				9B06DF78272ACD6F00DA2F83 /* FlowersListView.swift in Sources */,
 				C8E24D1B274D158E008B5F6E /* UICollectionViewStub.swift in Sources */,
 				C88A1FE8272AD2EA00ECCBDE /* UIView+Constraints.swift in Sources */,
 				9724775B27297CC600158DD9 /* AppDelegate.swift in Sources */,
+				C8AE8B342B04795900E10CD3 /* VanGraaffCanvaInteractor.swift in Sources */,
 				9724775D27297CC600158DD9 /* SceneDelegate.swift in Sources */,
 				925B13AB275F8F8400747A10 /* ImageDownloadProtocol.swift in Sources */,
 				88BD0DD22732B77D00EB958B /* FlowerItemCell.swift in Sources */,
@@ -677,7 +717,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4AT6B8R6CS;
+				DEVELOPMENT_TEAM = TS87TCCJCA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlowersStore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -705,7 +745,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4AT6B8R6CS;
+				DEVELOPMENT_TEAM = TS87TCCJCA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlowersStore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
